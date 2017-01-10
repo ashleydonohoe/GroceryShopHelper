@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ShoppingHelper
 //
-//  Created by Gabriele on 1/10/17.
+//  Created by Ashley Donohoe on 1/10/17.
 //  Copyright © 2017 Ashley Donohoe. All rights reserved.
 //
 
