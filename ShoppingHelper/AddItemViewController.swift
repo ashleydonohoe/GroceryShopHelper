@@ -25,10 +25,13 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         itemQuantity.delegate = self
         itemPrice.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @IBAction func cancelItem(_ sender: Any) {
@@ -49,11 +52,19 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func saveItem(_ sender: Any) {
+       save()
+    }
+    
+    func save() {
         if let itemName = itemName.text, let itemCategory = itemCategory.text, let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!), let itemImage = itemImagePreview.image {
             
             let newItem = Item(name: itemName, category: itemCategory, quantity: itemQuantity, price: itemPrice, image: itemImage, favorite: false)
             print(newItem)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
