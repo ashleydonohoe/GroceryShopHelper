@@ -21,42 +21,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-R6-zqp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jch-Oa-PNE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="PJd-yA-Rq9"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="zVk-EG-BCD"/>
+                                    <navigationItem title="Nearby Grocery Stores" id="rTT-Dg-s0z">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KUj-9C-zA0">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-GB-fef">
+                                <rect key="frame" x="0.0" y="66" width="375" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y3L-GB-fef" firstAttribute="top" secondItem="jch-Oa-PNE" secondAttribute="bottom" id="3NP-sh-JV3"/>
+                            <constraint firstItem="y3L-GB-fef" firstAttribute="leading" secondItem="aKK-bM-acP" secondAttribute="leading" id="Ssr-bH-G3U"/>
+                            <constraint firstItem="Fsu-wt-243" firstAttribute="top" secondItem="y3L-GB-fef" secondAttribute="bottom" id="bAj-DH-IPU"/>
+                            <constraint firstItem="jch-Oa-PNE" firstAttribute="leading" secondItem="aKK-bM-acP" secondAttribute="leading" id="dwH-D9-Nhd"/>
+                            <constraint firstAttribute="trailing" secondItem="y3L-GB-fef" secondAttribute="trailing" id="hto-av-kjb"/>
+                            <constraint firstItem="jch-Oa-PNE" firstAttribute="top" secondItem="aKK-bM-acP" secondAttribute="top" id="ooe-bw-m5d"/>
+                            <constraint firstAttribute="trailing" secondItem="jch-Oa-PNE" secondAttribute="trailing" id="yvQ-7N-jeA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby Stores" image="nearby" id="A74-Ab-nHp"/>
-                    <connections>
-                        <segue destination="ORq-yh-0mT" kind="show" id="QUa-0l-Iw3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8p-0e-mG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="284"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BVn-XO-9qo">
-            <objects>
-                <viewController id="ORq-yh-0mT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5uU-vD-SiS"/>
-                        <viewControllerLayoutGuide type="bottom" id="cEU-lI-NHF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fYE-zd-XpQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyi-yZ-IZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="421" y="272"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="283.80809595202402"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ayj-6p-Nbf">
@@ -70,42 +69,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-f9-pJw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei9-25-oM6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="6pc-z7-LUa"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="XyO-xh-bZZ"/>
+                                    <navigationItem title="Change Your Settings" id="h5p-E5-vZw">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3PP-iS-3So">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hyb-Z6-BJ2">
+                                <rect key="frame" x="111.5" y="105" width="152" height="29"/>
+                                <segments>
+                                    <segment title="3 mi"/>
+                                    <segment title="5 mi"/>
+                                    <segment title="10 mi "/>
+                                </segments>
+                                <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Stores Shown:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arT-G4-dRs">
+                                <rect key="frame" x="114" y="150" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D2N-Ce-4Ff">
+                                <rect key="frame" x="100" y="179" width="174" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="6YH-vy-E9t"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                    <segment title="20"/>
+                                </segments>
+                                <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Store Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkK-7T-3nY">
+                                <rect key="frame" x="110.5" y="76" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="arT-G4-dRs" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="8pZ-DW-VZC"/>
+                            <constraint firstItem="MkK-7T-3nY" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="CJh-or-Pns"/>
+                            <constraint firstAttribute="trailing" secondItem="ei9-25-oM6" secondAttribute="trailing" id="FH1-fG-5vk"/>
+                            <constraint firstItem="hyb-Z6-BJ2" firstAttribute="top" secondItem="MkK-7T-3nY" secondAttribute="bottom" constant="8" id="JUD-Dk-g3X"/>
+                            <constraint firstItem="ei9-25-oM6" firstAttribute="leading" secondItem="XSd-5A-LD2" secondAttribute="leading" id="KBj-hV-ZL6"/>
+                            <constraint firstItem="D2N-Ce-4Ff" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="VZ5-Yv-dwt"/>
+                            <constraint firstItem="ei9-25-oM6" firstAttribute="top" secondItem="XSd-5A-LD2" secondAttribute="top" id="aUa-QY-WSc"/>
+                            <constraint firstItem="MkK-7T-3nY" firstAttribute="top" secondItem="ei9-25-oM6" secondAttribute="bottom" constant="10" id="bDX-ec-X0S"/>
+                            <constraint firstItem="D2N-Ce-4Ff" firstAttribute="top" secondItem="arT-G4-dRs" secondAttribute="bottom" constant="8" id="bL6-w2-1bg"/>
+                            <constraint firstItem="arT-G4-dRs" firstAttribute="top" secondItem="hyb-Z6-BJ2" secondAttribute="bottom" constant="17" id="kmB-St-tpJ"/>
+                            <constraint firstItem="arT-G4-dRs" firstAttribute="top" secondItem="hyb-Z6-BJ2" secondAttribute="bottom" constant="17" id="sKU-Jb-LUl"/>
+                            <constraint firstItem="hyb-Z6-BJ2" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="t3u-Vd-LFi"/>
+                            <constraint firstItem="D2N-Ce-4Ff" firstAttribute="top" secondItem="arT-G4-dRs" secondAttribute="bottom" constant="8" id="xDB-Fp-GIO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="LCx-K9-7mm"/>
-                    <connections>
-                        <segue destination="BSo-lT-0X8" kind="show" id="Rm1-nV-7i9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLF-vU-cT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="997"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WZp-uE-46l">
-            <objects>
-                <viewController id="BSo-lT-0X8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2QM-vd-guR"/>
-                        <viewControllerLayoutGuide type="bottom" id="vMk-7X-qhp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s1g-0l-Uvf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f8G-nU-cVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="457" y="967"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="996.25187406296857"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="47i-0q-1ol">
@@ -119,31 +152,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-Mo-b8J">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-Mo-b8J">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="1ll-T0-zS3"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="YfN-do-3Hc"/>
+                                    <navigationItem title="Grocery List" id="YfN-do-3Hc">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5UI-mF-Chc">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhE-xd-1R4">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gDn-Vw-wDW">
+                                <rect key="frame" x="8" y="72" width="359" height="29"/>
+                                <segments>
+                                    <segment title="All Items"/>
+                                    <segment title="Favorite Items"/>
+                                </segments>
+                                <color key="tintColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gDn-Vw-wDW" secondAttribute="trailing" constant="8" id="BFO-BM-Mjy"/>
+                            <constraint firstItem="BhE-xd-1R4" firstAttribute="top" secondItem="gDn-Vw-wDW" secondAttribute="bottom" constant="8" id="JfJ-xc-jfY"/>
                             <constraint firstAttribute="trailing" secondItem="OIa-Mo-b8J" secondAttribute="trailing" id="KX0-wa-iCN"/>
+                            <constraint firstItem="BhE-xd-1R4" firstAttribute="top" secondItem="gDn-Vw-wDW" secondAttribute="bottom" constant="8" id="M0s-ds-PDd"/>
+                            <constraint firstItem="gDn-Vw-wDW" firstAttribute="top" secondItem="OIa-Mo-b8J" secondAttribute="bottom" constant="6" id="TlZ-G2-odu"/>
                             <constraint firstItem="OIa-Mo-b8J" firstAttribute="leading" secondItem="UJF-4C-LWw" secondAttribute="leading" id="Zac-78-OJ6"/>
+                            <constraint firstItem="BhE-xd-1R4" firstAttribute="leading" secondItem="UJF-4C-LWw" secondAttribute="leading" id="fcL-nz-FsJ"/>
                             <constraint firstItem="OIa-Mo-b8J" firstAttribute="top" secondItem="rn7-2G-kpQ" secondAttribute="bottom" constant="-20" id="kPu-y4-zGW"/>
+                            <constraint firstItem="gDn-Vw-wDW" firstAttribute="leading" secondItem="UJF-4C-LWw" secondAttribute="leading" constant="8" id="lLH-4H-xYo"/>
+                            <constraint firstItem="Vr0-n2-SQj" firstAttribute="top" secondItem="BhE-xd-1R4" secondAttribute="bottom" id="oJY-8e-LLG"/>
+                            <constraint firstAttribute="trailing" secondItem="BhE-xd-1R4" secondAttribute="trailing" id="peA-NI-yZo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Grocery List" image="shopping-cart-add" id="fHH-6N-4pT"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="GP8-jO-BJr"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Grocery List" image="shopping-cart-add" id="3vJ-Ji-3JR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25F-id-fFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-382"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="-382.75862068965517"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JDW-E2-0yr">
@@ -164,28 +219,11 @@
             </objects>
             <point key="canvasLocation" x="-1350" y="-54"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="478" y="-340"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="nearby" width="24" height="24"/>
-        <image name="settings" width="24" height="24"/>
-        <image name="shopping-cart-add" width="24" height="24"/>
+        <image name="nearby" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+        <image name="shopping-cart-add" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
