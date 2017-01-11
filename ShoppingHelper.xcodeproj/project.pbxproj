@@ -17,6 +17,7 @@
 		E01DE74A1E25B99C006C5C3E /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7491E25B99C006C5C3E /* AddItemViewController.swift */; };
 		E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */; };
 		E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74D1E25B9BD006C5C3E /* Store.swift */; };
+		E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7501E25E66E006C5C3E /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E01DE7491E25B99C006C5C3E /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsViewController.swift; sourceTree = "<group>"; };
 		E01DE74D1E25B9BD006C5C3E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E01DE7501E25E66E006C5C3E /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E01DE74D1E25B9BD006C5C3E /* Store.swift */,
+				E01DE7501E25E66E006C5C3E /* ItemModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
+				E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */,
 				E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */,
 				E01DE72F1E24B4BB006C5C3E /* AppDelegate.swift in Sources */,
 				E01DE7481E25B981006C5C3E /* SettingsViewController.swift in Sources */,
