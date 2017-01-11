@@ -12,8 +12,9 @@ class GroceryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func addItem(_ sender: Any) {
+        
+    }
 }

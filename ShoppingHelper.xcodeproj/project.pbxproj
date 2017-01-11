@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E01DE72F1E24B4BB006C5C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */; };
-		E01DE7311E24B4BB006C5C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7301E24B4BB006C5C3E /* ViewController.swift */; };
 		E01DE7341E24B4BB006C5C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01DE7321E24B4BB006C5C3E /* Main.storyboard */; };
 		E01DE7361E24B4BB006C5C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01DE7351E24B4BB006C5C3E /* Assets.xcassets */; };
 		E01DE7391E24B4BB006C5C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01DE7371E24B4BB006C5C3E /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		E01DE72B1E24B4BB006C5C3E /* ShoppingHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E01DE7301E24B4BB006C5C3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E01DE7331E24B4BB006C5C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E01DE7351E24B4BB006C5C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E01DE7381E24B4BB006C5C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				E01DE7421E25B945006C5C3E /* Model */,
 				E01DE7411E25B940006C5C3E /* Controller */,
 				E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */,
-				E01DE7301E24B4BB006C5C3E /* ViewController.swift */,
 				E01DE7321E24B4BB006C5C3E /* Main.storyboard */,
 				E01DE7351E24B4BB006C5C3E /* Assets.xcassets */,
 				E01DE7371E24B4BB006C5C3E /* LaunchScreen.storyboard */,
@@ -173,7 +170,6 @@
 			files = (
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
-				E01DE7311E24B4BB006C5C3E /* ViewController.swift in Sources */,
 				E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */,
 				E01DE72F1E24B4BB006C5C3E /* AppDelegate.swift in Sources */,
 				E01DE7481E25B981006C5C3E /* SettingsViewController.swift in Sources */,

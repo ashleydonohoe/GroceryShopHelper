@@ -12,7 +12,7 @@
         <!--Nearby Stores-->
         <scene sceneID="xAu-lc-bZ3">
             <objects>
-                <viewController id="dtT-rd-4Z1" sceneMemberID="viewController">
+                <viewController id="dtT-rd-4Z1" customClass="StoresListViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aUx-Sz-5wh"/>
                         <viewControllerLayoutGuide type="bottom" id="Fsu-wt-243"/>
@@ -60,7 +60,7 @@
         <!--Settings-->
         <scene sceneID="ayj-6p-Nbf">
             <objects>
-                <viewController id="42H-0w-SCe" sceneMemberID="viewController">
+                <viewController id="42H-0w-SCe" customClass="SettingsViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G74-pT-aWK"/>
                         <viewControllerLayoutGuide type="bottom" id="TIa-bX-g71"/>
@@ -143,7 +143,7 @@
         <!--Grocery List-->
         <scene sceneID="47i-0q-1ol">
             <objects>
-                <viewController id="yxI-pl-pJp" sceneMemberID="viewController">
+                <viewController id="yxI-pl-pJp" customClass="GroceryListViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rn7-2G-kpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Vr0-n2-SQj"/>
@@ -162,6 +162,10 @@
                                     <navigationItem title="Grocery List" id="YfN-do-3Hc">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5UI-mF-Chc">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="addItem:" destination="yxI-pl-pJp" id="q3A-UV-qyB"/>
+                                                <segue destination="HES-VO-Bj4" kind="presentation" id="3OV-hX-SWr"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -199,6 +203,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25F-id-fFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399.19999999999999" y="-382.75862068965517"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l5w-hR-T82">
+            <objects>
+                <viewController id="HES-VO-Bj4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ha6-gw-Jwv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lhi-c6-EID"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fHN-30-ZGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhE-IV-l8j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="li5-AU-qpd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="tWh-pZ-7Ph"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Add Item to List" id="tnr-4O-E9J">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ETI-X8-D0p">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cmW-Lh-fXE">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="addItem:" destination="yxI-pl-pJp" id="gXa-Yg-eNO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LhE-IV-l8j" firstAttribute="leading" secondItem="fHN-30-ZGK" secondAttribute="leading" id="QND-Af-iKG"/>
+                            <constraint firstItem="LhE-IV-l8j" firstAttribute="top" secondItem="fHN-30-ZGK" secondAttribute="top" id="YEw-AD-HMm"/>
+                            <constraint firstAttribute="trailing" secondItem="LhE-IV-l8j" secondAttribute="trailing" id="e6H-DL-69j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5as-ly-RyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="-290"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JDW-E2-0yr">
