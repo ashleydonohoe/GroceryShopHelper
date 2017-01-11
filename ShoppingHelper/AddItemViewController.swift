@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemCategory: UITextField!
@@ -20,6 +20,10 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        itemName.delegate = self
+        itemCategory.delegate = self
+        itemQuantity.delegate = self
+        itemPrice.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,16 +42,22 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    }
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            itemImagePreview.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveItem(_ sender: Any) {
-        if let itemName = itemName.text, let itemCategory = itemCategory.text, let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!) {
+        if let itemName = itemName.text, let itemCategory = itemCategory.text, let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!), let itemImage = itemImagePreview.image {
             
-            var newItem = Item(name: itemName, category: itemCategory, quantity: itemQuantity, price: itemPrice, image: nil, favorite: false)
+            let newItem = Item(name: itemName, category: itemCategory, quantity: itemQuantity, price: itemPrice, image: itemImage, favorite: false)
             print(newItem)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
