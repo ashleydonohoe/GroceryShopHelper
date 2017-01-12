@@ -15,6 +15,6 @@ struct Item {
     var category: String
     var quantity:Int
     var price: Double
-    var image:UIImage //Later on, image will be optional when user adds items
+    var image:UIImage? //Later on, image will be optional when user adds items
     var favorite:Bool = false
 }
