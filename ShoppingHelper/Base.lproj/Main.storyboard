@@ -240,7 +240,7 @@
                     <tabBarItem key="tabBarItem" title="Grocery List" image="shopping-cart-add" id="3vJ-Ji-3JR"/>
                     <navigationItem key="navigationItem" title="Grocery List" id="y91-3R-9TK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p9U-W7-lfd">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -467,5 +467,5 @@
         <image name="settings" width="20" height="20"/>
         <image name="shopping-cart-add" width="20" height="20"/>
     </resources>
-    <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
