@@ -70,10 +70,31 @@
                     <navigationItem key="navigationItem" title="Nearby Grocery Stores" id="eru-VK-yBI">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="LyY-ik-Xpj"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7cs-Bk-gaX" kind="show" id="pdu-ZF-ORp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8p-0e-mG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-43" y="38"/>
+        </scene>
+        <!--Store Details View Controller-->
+        <scene sceneID="b2j-vB-iZY">
+            <objects>
+                <viewController id="7cs-Bk-gaX" customClass="StoreDetailsViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Xg-kL-sTt"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Th-3G-FJe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jF0-YE-bU5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMG-vo-V95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="38"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ayj-6p-Nbf">
@@ -217,7 +238,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="groceryItemTable" destination="BhE-xd-1R4" id="NDD-1i-uM8"/>
-                        <segue destination="GAr-b2-0Sq" kind="show" id="TM5-Fj-zpE"/>
+                        <segue destination="5ob-Vo-mgn" kind="show" id="5S8-on-TbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25F-id-fFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,22 +246,22 @@
             <point key="canvasLocation" x="133" y="-868"/>
         </scene>
         <!--Grocery Item Detail View Controller-->
-        <scene sceneID="isI-rv-RXQ">
+        <scene sceneID="d3w-AK-cxu">
             <objects>
-                <viewController id="GAr-b2-0Sq" customClass="GroceryItemDetailViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5ob-Vo-mgn" customClass="GroceryItemDetailViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fhp-IY-nfu"/>
-                        <viewControllerLayoutGuide type="bottom" id="IaA-uW-l5u"/>
+                        <viewControllerLayoutGuide type="top" id="5F5-nB-sbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Vf-F7-ihS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xS5-XL-Zd8">
+                    <view key="view" contentMode="scaleToFill" id="HoB-6J-IzC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RLr-rm-xrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R03-ar-zj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="-868"/>
+            <point key="canvasLocation" x="926" y="-869"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="l5w-hR-T82">
