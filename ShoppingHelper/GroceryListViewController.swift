@@ -18,7 +18,9 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
-
+//        self.navigationController?.navigationBar.isTranslucent = false
+//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 231, green: 76, blue: 60, alpha: 1)
+        //UIColor(red: 231, green: 76, blue: 60, alpha: 1)
         
     }
     
