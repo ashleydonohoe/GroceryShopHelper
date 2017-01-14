@@ -16,10 +16,15 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func addItem(_ sender: Any) {
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
+
+        
+    }
+    
+    func addItem() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
+        self.present(controller, animated: true, completion: nil)
     }
     
     // TODO: Later update to account for categories

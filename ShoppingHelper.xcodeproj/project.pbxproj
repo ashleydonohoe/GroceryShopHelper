@@ -19,6 +19,7 @@
 		E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74D1E25B9BD006C5C3E /* Store.swift */; };
 		E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7501E25E66E006C5C3E /* ItemModel.swift */; };
 		E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */; };
+		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E01DE74D1E25B9BD006C5C3E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E01DE7501E25E66E006C5C3E /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeForLater.swift; sourceTree = "<group>"; };
+		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				E01DE7471E25B981006C5C3E /* SettingsViewController.swift */,
 				E01DE7491E25B99C006C5C3E /* AddItemViewController.swift */,
 				E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */,
+				E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */,
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
 				E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */,
