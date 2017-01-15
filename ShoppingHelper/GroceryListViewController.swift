@@ -18,9 +18,6 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
-//        self.navigationController?.navigationBar.isTranslucent = false
-//        self.navigationController?.navigationBar.barTintColor = UIColor(red: 231, green: 76, blue: 60, alpha: 1)
-        //UIColor(red: 231, green: 76, blue: 60, alpha: 1)
         
     }
     
@@ -34,15 +31,12 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         return 1
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     // TODO: Make custom cell to show item name, price, quantity, and image
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "ItemCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as UITableViewCell
-        cell.textLabel?.text = self.sampleItems[indexPath.row].name
+        let item = self.sampleItems[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = item.name
         return cell
     }
     
@@ -50,7 +44,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         return self.sampleItems.count
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GroceryItemDetailViewController") as! GroceryItemDetailViewController
         controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
         self.navigationController?.pushViewController(controller, animated: true)

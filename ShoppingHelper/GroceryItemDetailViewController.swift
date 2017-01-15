@@ -22,13 +22,19 @@ class GroceryItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        print(item)
+        if let item = item {
+            itemNameLabel.text = item.name
+            itemCategoryLabel.text = item.category
+            if let image = item.image {
+                itemImage.image = image
+            }
+            quantityLabel.text = String(item.quantity)
+            priceLabel.text = "$" + String(item.price)
+            if item.favorite {
+                favoriteLabel.text = "Yes"
+            } else {
+                favoriteLabel.text = "No"
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
