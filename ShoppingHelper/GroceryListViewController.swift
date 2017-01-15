@@ -10,7 +10,7 @@ import UIKit
 
 class GroceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var sampleItems: [Item] = [Item(name: "Bacon", category: "Meat", quantity: 2, price: 3.99, image: nil, favorite: false), Item(name: "Cereal", category: "Grains", quantity: 1, price: 3.89, image: nil, favorite: true) ]
+    var sampleItems: [Item] = [Item(name: "Bacon", category: "Meat", quantity: 2, price: 3.99, image: UIImage(named: "bacon.jpg")!, favorite: false), Item(name: "Cereal", category: "Grains", quantity: 1, price: 3.89, image: nil, favorite: true) ]
     
     @IBOutlet weak var groceryItemTable: UITableView!
     
@@ -48,5 +48,11 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.sampleItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "GroceryItemDetailViewController") as! GroceryItemDetailViewController
+        controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
