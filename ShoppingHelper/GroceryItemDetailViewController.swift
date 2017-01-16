@@ -24,7 +24,7 @@ class GroceryItemDetailViewController: UIViewController {
 
         if let item = item {
             itemNameLabel.text = item.name
-            itemCategoryLabel.text = item.category
+            itemCategoryLabel.text = "Category: " + item.category
             if let image = item.image {
                 itemImage.image = image
             }
