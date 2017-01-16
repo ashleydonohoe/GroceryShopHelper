@@ -173,9 +173,10 @@
             <objects>
                 <navigationController id="a22-KZ-riA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Grocery List" image="shopping-cart-add" id="1zT-H0-i1x"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mff-nh-V1K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mff-nh-V1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -335,6 +336,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kug-cS-tRi" firstAttribute="top" secondItem="5F5-nB-sbh" secondAttribute="bottom" constant="24" id="2vM-TJ-4zQ"/>
                             <constraint firstItem="4LO-2S-edR" firstAttribute="leading" secondItem="HoB-6J-IzC" secondAttribute="leadingMargin" constant="72" id="4LY-JH-KLX"/>
