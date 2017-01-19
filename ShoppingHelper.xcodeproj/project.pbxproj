@@ -21,6 +21,7 @@
 		E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */; };
 		E03D53EC1E2B34B800C29919 /* bacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03D53EB1E2B34B800C29919 /* bacon.jpg */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
+		E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE84D1E308CD000A64562 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeForLater.swift; sourceTree = "<group>"; };
 		E03D53EB1E2B34B800C29919 /* bacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon.jpg; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
+		E0FDE84D1E308CD000A64562 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				E01DE74D1E25B9BD006C5C3E /* Store.swift */,
 				E01DE7501E25E66E006C5C3E /* ItemModel.swift */,
+				E0FDE84D1E308CD000A64562 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */,
+				E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */,
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
 				E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */,
@@ -319,6 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.ShoppingHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,6 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.ShoppingHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
