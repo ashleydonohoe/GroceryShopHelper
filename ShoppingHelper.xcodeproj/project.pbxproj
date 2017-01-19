@@ -22,6 +22,7 @@
 		E03D53EC1E2B34B800C29919 /* bacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03D53EB1E2B34B800C29919 /* bacon.jpg */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
 		E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE84D1E308CD000A64562 /* Constants.swift */; };
+		E0FDE8511E30927D00A64562 /* GooglePlacesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E03D53EB1E2B34B800C29919 /* bacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon.jpg; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
 		E0FDE84D1E308CD000A64562 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		E01DE72D1E24B4BB006C5C3E /* ShoppingHelper */ = {
 			isa = PBXGroup;
 			children = (
+				E0FDE84F1E30926C00A64562 /* API Client */,
 				E01DE7421E25B945006C5C3E /* Model */,
 				E01DE7411E25B940006C5C3E /* Controller */,
 				E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */,
@@ -108,6 +111,14 @@
 				E0FDE84D1E308CD000A64562 /* Constants.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E0FDE84F1E30926C00A64562 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */,
+			);
+			name = "API Client";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FDE8511E30927D00A64562 /* GooglePlacesAPIClient.swift in Sources */,
 				E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */,
 				E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */,
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
