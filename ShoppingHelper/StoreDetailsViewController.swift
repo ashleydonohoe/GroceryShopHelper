@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class StoreDetailsViewController: UIViewController {
+class StoreDetailsViewController: UIViewController, MKMapViewDelegate {
     
     var store: Store?
 
@@ -25,6 +25,18 @@ class StoreDetailsViewController: UIViewController {
         
         if let store = store {
             showStoreDetails(store: store)
+            let location = store.storeGeometry["location"] as! [String:Any]
+            let lat = CLLocationDegrees(location["lat"] as! Double)
+            let lng = CLLocationDegrees(location["lng"] as! Double)
+            
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            storeMapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpanMake(0.01, 0.01)), animated: true)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = store.storeName
+            
+            self.storeMapView.addAnnotation(annotation)
         }
     }
 
