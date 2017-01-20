@@ -21,7 +21,7 @@ class GooglePlacesAPIClient: NSObject {
         return Singleton.sharedInstance
     }
     
-    func getListOfStores() {
+    func getListOfStores(completionHandlerForStores: @escaping (_ success: Bool) -> Void) {
         
         // Method parameters
         let methodParameters:[String:Any] = [
@@ -90,8 +90,12 @@ class GooglePlacesAPIClient: NSObject {
             
             self.stores = Store.storesFromResults(results: storesDictionary)
             
-            print(self.stores[1].storeAddress)            
+            if self.stores.count > 0 {
+                completionHandlerForStores(true)
+            }
         }
+        
+        
         
         task.resume()
     }

@@ -23,6 +23,7 @@
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
 		E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE84D1E308CD000A64562 /* Constants.swift */; };
 		E0FDE8511E30927D00A64562 /* GooglePlacesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */; };
+		E0FDE8531E31C59A00A64562 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
 		E0FDE84D1E308CD000A64562 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIClient.swift; sourceTree = "<group>"; };
+		E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E01DE74D1E25B9BD006C5C3E /* Store.swift */,
 				E01DE7501E25E66E006C5C3E /* ItemModel.swift */,
 				E0FDE84D1E308CD000A64562 /* Constants.swift */,
+				E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				E01DE7441E25B958006C5C3E /* GroceryListViewController.swift in Sources */,
 				E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */,
 				E01DE74A1E25B99C006C5C3E /* AddItemViewController.swift in Sources */,
+				E0FDE8531E31C59A00A64562 /* GCDBlackBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
