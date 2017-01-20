@@ -33,7 +33,8 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "StoreDetailsViewController") as! StoreDetailsViewController
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func getStoreData() {
