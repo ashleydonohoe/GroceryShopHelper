@@ -14,18 +14,22 @@ struct Store {
     let placeID:String // Google Maps place id for store
     let storeName:String
     let storeAddress:String
-    let storePhone:String
-    let storeReviews: [[String:Any]]
+    let storePriceLevel: Int
     let storeRating:Double
+    let storeGeometry: [String:Any]
+    let storeLatitude: Double
+    let storeLongitude: Double
     
     // Initializing store from dictionary
-    init(dictionary: [String:AnyObject]) {
+    init(dictionary: [String:Any]) {
         placeID = dictionary[Constants.ResponseKeys.PlaceID] as? String ?? "N/A"
         storeName = dictionary[Constants.ResponseKeys.PlaceName] as? String ?? "Store Name Unavailable"
         storeAddress = dictionary[Constants.ResponseKeys.Address] as? String ?? "Address not available"
-        storePhone = dictionary[Constants.ResponseKeys.PhoneNumber] as? String ?? "Phone number unavailable"
-        storeReviews = dictionary[Constants.ResponseKeys.Reviews] as? [[String:AnyObject]] ?? []
+        storePriceLevel = dictionary[Constants.ResponseKeys.PriceLevel] as? Int ?? 0
         storeRating = dictionary[Constants.ResponseKeys.Rating] as? Double ?? 0.0
+        storeGeometry = dictionary[Constants.ResponseKeys.Geometry] as? [String: Any] ?? [:]
+        storeLatitude = dictionary[Constants.ResponseKeys.Latitude] as? Double ?? 0.0
+        storeLongitude = dictionary[Constants.ResponseKeys.Longitude] as? Double ?? 0.0
     }
     
     // Creating stores from the results

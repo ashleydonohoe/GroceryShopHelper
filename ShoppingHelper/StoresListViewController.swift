@@ -9,11 +9,14 @@
 import UIKit
 
 class StoresListViewController: UIViewController {
+    
+    let googleMapsAPI = GooglePlacesAPIClient.sharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        googleMapsAPI.getListOfStores()
     }
 
     override func didReceiveMemoryWarning() {
