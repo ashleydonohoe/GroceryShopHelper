@@ -17,8 +17,6 @@ struct Store {
     let storePriceLevel: Int
     let storeRating:Double
     let storeGeometry: [String:Any]
-    let storeLatitude: Double
-    let storeLongitude: Double
     
     // Initializing store from dictionary
     init(dictionary: [String:Any]) {
@@ -28,8 +26,6 @@ struct Store {
         storePriceLevel = dictionary[Constants.ResponseKeys.PriceLevel] as? Int ?? 0
         storeRating = dictionary[Constants.ResponseKeys.Rating] as? Double ?? 0.0
         storeGeometry = dictionary[Constants.ResponseKeys.Geometry] as? [String: Any] ?? [:]
-        storeLatitude = dictionary[Constants.ResponseKeys.Latitude] as? Double ?? 0.0
-        storeLongitude = dictionary[Constants.ResponseKeys.Longitude] as? Double ?? 0.0
     }
     
     // Creating stores from the results

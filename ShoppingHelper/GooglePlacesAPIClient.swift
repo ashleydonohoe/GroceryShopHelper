@@ -11,6 +11,8 @@ import UIKit
 
 class GooglePlacesAPIClient: NSObject {
     
+    var stores = [Store]()
+    
     //Allows client to act as singleton
     class func sharedInstance() -> GooglePlacesAPIClient {
         struct Singleton {
@@ -86,39 +88,9 @@ class GooglePlacesAPIClient: NSObject {
             }
             
             
-            let tempStoresArray = Store.storesFromResults(results: storesDictionary)
+            self.stores = Store.storesFromResults(results: storesDictionary)
             
-            print(tempStoresArray[0])
-            
-//            for store in storesDictionary {
-//            
-//                // Check for the keys needed to make dictionary
-//                guard let id = store[Constants.ResponseKeys.PlaceID] as? String,
-//                let name = store[Constants.ResponseKeys.PlaceName] as? String,
-//                let address = store[Constants.ResponseKeys.Address] as? String,
-//                let priceLevel = store[Constants.ResponseKeys.PriceLevel] as? Int,
-//                    let rating = store[Constants.ResponseKeys.Rating] as? Double else {
-//                        displayError("Could not find all required keys")
-//                        return
-//                }
-//                let currentStore = Store(dictionary: [placeID: id, storeName: name, storeAddress: address, storePriceLevel: priceLevel, storeRating: rating])
-//                print(currentStore)
-//                
-//                
-//                
-//                
-//            }
-//            
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            print(self.stores[1].storeAddress)            
         }
         
         task.resume()
