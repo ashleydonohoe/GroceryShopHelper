@@ -110,8 +110,6 @@
 			children = (
 				E01DE74D1E25B9BD006C5C3E /* Store.swift */,
 				E01DE7501E25E66E006C5C3E /* ItemModel.swift */,
-				E0FDE84D1E308CD000A64562 /* Constants.swift */,
-				E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -119,6 +117,8 @@
 		E0FDE84F1E30926C00A64562 /* API Client */ = {
 			isa = PBXGroup;
 			children = (
+				E0FDE84D1E308CD000A64562 /* Constants.swift */,
+				E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */,
 				E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */,
 			);
 			name = "API Client";
