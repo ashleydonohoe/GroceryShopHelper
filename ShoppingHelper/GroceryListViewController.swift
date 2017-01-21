@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
-class GroceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
-    var sampleItems: [Item] = [Item(name: "Bacon", category: "Meat", quantity: 2, price: 3.99, image: UIImage(named: "bacon.jpg")!, favorite: false), Item(name: "Cereal", category: "Grains", quantity: 1, price: 3.89, image: nil, favorite: true) ]
+//    var sampleItems: [Item] = [Item(name: "Bacon", category: "Meat", quantity: 2, price: 3.99, image: UIImage(named: "bacon.jpg")!, favorite: false), Item(name: "Cereal", category: "Grains", quantity: 1, price: 3.89, image: nil, favorite: true) ]
     
+    @IBOutlet weak var sortControl: UISegmentedControl!
     @IBOutlet weak var groceryItemTable: UITableView!
+    
+    var fetchedResultsController: NSFetchedResultsController<GroceryItem>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,25 +32,50 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // TODO: Later update to account for categories
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 0
     }
     
     // TODO: Make custom cell to show item name, price, quantity, and image
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "ItemCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as UITableViewCell
-        let item = self.sampleItems[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = item.name
+//        let item = self.sampleItems[(indexPath as NSIndexPath).row]
+//        cell.textLabel?.text = item.name
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sampleItems.count
+        return 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GroceryItemDetailViewController") as! GroceryItemDetailViewController
-        controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
+//        controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func fetchGroceryListData() {
+        let fetchRequest: NSFetchRequest<GroceryItem> = GroceryItem.fetchRequest()
+        let showAllItems = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [showAllItems]
+        
+        if sortControl.selectedSegmentIndex == 1 {
+            fetchRequest.predicate = NSPredicate(format: "favorite == %@", true as CVarArg)
+        }
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        do {
+            try self.fetchedResultsController.performFetch()
+            groceryItemTable.reloadData()
+        } catch {
+            print(error)
+            let alertController = UIAlertController(title: "Error", message: "Could not fetch data", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+        }
     }
 }

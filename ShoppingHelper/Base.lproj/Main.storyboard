@@ -357,6 +357,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="groceryItemTable" destination="BhE-xd-1R4" id="NDD-1i-uM8"/>
+                        <outlet property="sortControl" destination="gDn-Vw-wDW" id="XdI-w9-Fv9"/>
                         <segue destination="5ob-Vo-mgn" kind="show" identifier="showItem" id="5S8-on-TbV"/>
                     </connections>
                 </viewController>
