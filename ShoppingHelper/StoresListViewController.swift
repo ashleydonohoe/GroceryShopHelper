@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import CoreLocation
 
-class StoresListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StoresListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var storesTable: UITableView!
     let googleMapsAPI = GooglePlacesAPIClient.sharedInstance()
     var storesList = [Store]()
+    var locationManager: CLLocationManager?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Setting up location manager to get permission
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.startUpdatingLocation()
+        
+        if let location = locationManager?.location?.coordinate {
+            googleMapsAPI.userLatitude = location.latitude
+            googleMapsAPI.userLongitude = location.longitude
+        }
+        
+
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

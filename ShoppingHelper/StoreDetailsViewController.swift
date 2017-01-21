@@ -8,10 +8,15 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class StoreDetailsViewController: UIViewController, MKMapViewDelegate {
+class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var store: Store?
+    var lat:CLLocationDegrees?
+    var lng:CLLocationDegrees?
+    let googleMapsAPI = GooglePlacesAPIClient.sharedInstance()
+    
 
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeAddressLabel: UILabel!
@@ -25,16 +30,18 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate {
         
         if let store = store {
             showStoreDetails(store: store)
-            let location = store.storeGeometry["location"] as! [String:Any]
-            let lat = CLLocationDegrees(location["lat"] as! Double)
-            let lng = CLLocationDegrees(location["lng"] as! Double)
             
-            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            let location = store.storeGeometry["location"] as! [String:Any]
+            lat = CLLocationDegrees(location["lat"] as! Double)
+            lng = CLLocationDegrees(location["lng"] as! Double)
+            
+            let coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
             storeMapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpanMake(0.01, 0.01)), animated: true)
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             annotation.title = store.storeName
+            annotation.subtitle = "Tap for Directions"
             
             self.storeMapView.addAnnotation(annotation)
         }
@@ -69,5 +76,36 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate {
             return "Not Rated"
         }
         return String(repeating: "⭐️", count: rating)
+    }
+    
+    // Code to add accessory view for pin and allow call out, adapted from PinSample app from iOS networking course
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let reuseId = "pin"
+        
+        var pinView = storeMapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinTintColor = .red
+            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+    }
+
+    
+    // This delegate method is implemented to respond to taps. It opens the system browser
+    // to the URL specified in the annotationViews subtitle property.
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            let app = UIApplication.shared
+            let toOpen = URL(string: "http://maps.apple.com/?saddr=\(googleMapsAPI.userLatitude!),\((googleMapsAPI.userLongitude!))&daddr=\(lat!),\(lng!)")
+            app.open(toOpen!, options: [:], completionHandler: nil)
+        }
     }
 }

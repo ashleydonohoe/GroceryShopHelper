@@ -168,6 +168,9 @@
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="qkG-2y-gF7">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="471"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="7cs-Bk-gaX" id="JcI-x8-Boo"/>
+                                                </connections>
                                             </mapView>
                                         </subviews>
                                     </stackView>

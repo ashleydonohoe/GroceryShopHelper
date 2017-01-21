@@ -12,6 +12,8 @@ import UIKit
 class GooglePlacesAPIClient: NSObject {
     
     var stores = [Store]()
+    var userLatitude:Double?
+    var userLongitude: Double?
     
     //Allows client to act as singleton
     class func sharedInstance() -> GooglePlacesAPIClient {
@@ -27,11 +29,11 @@ class GooglePlacesAPIClient: NSObject {
         let methodParameters:[String:Any] = [
             Constants.ParameterKeys.APIKey: Constants.ParameterValues.APIKey,
             Constants.ParameterKeys.Query: Constants.ParameterValues.QueryItem,
-            Constants.ParameterKeys.Location: Constants.ParameterValues.Coordinates,
             Constants.ParameterKeys.Radius: Constants.ParameterValues.RadiusValue,
             Constants.ParameterKeys.OpenStatus: Constants.ParameterValues.OpenStatus
         ]
         
+    
         // Creating URL and request
         let urlString = Constants.GooglePlacesAPI.BaseListURL + escapedParameters(parameters: methodParameters as [String : AnyObject])
         print(urlString)
@@ -104,6 +106,7 @@ class GooglePlacesAPIClient: NSObject {
     
     // Function for escaping parameters, repurposed from SleepingInTheLibrary
     private func escapedParameters(parameters: [String: AnyObject]) -> String {
+        var escapedURL = ""
         if parameters.isEmpty {
             return ""
         } else {
@@ -121,7 +124,9 @@ class GooglePlacesAPIClient: NSObject {
             }
             
             // join into string
-            return "?\(keyValuePairs.joined(separator: "&"))"
+            escapedURL = "?location=\(self.userLatitude!), \(self.userLongitude!)&\(keyValuePairs.joined(separator: "&"))"
+            print(escapedURL)
+            return escapedURL
         }
     }
 
