@@ -30,7 +30,8 @@ class GooglePlacesAPIClient: NSObject {
             Constants.ParameterKeys.APIKey: Constants.ParameterValues.APIKey,
             Constants.ParameterKeys.Query: Constants.ParameterValues.QueryItem,
             Constants.ParameterKeys.Radius: Constants.ParameterValues.RadiusValue,
-            Constants.ParameterKeys.OpenStatus: Constants.ParameterValues.OpenStatus
+            Constants.ParameterKeys.OpenStatus: Constants.ParameterValues.OpenStatus,
+            Constants.ParameterKeys.Location: Constants.ParameterValues.Coordinates
         ]
         
     
@@ -106,7 +107,6 @@ class GooglePlacesAPIClient: NSObject {
     
     // Function for escaping parameters, repurposed from SleepingInTheLibrary
     private func escapedParameters(parameters: [String: AnyObject]) -> String {
-        var escapedURL = ""
         if parameters.isEmpty {
             return ""
         } else {
@@ -124,9 +124,7 @@ class GooglePlacesAPIClient: NSObject {
             }
             
             // join into string
-            escapedURL = "?location=\(self.userLatitude!), \(self.userLongitude!)&\(keyValuePairs.joined(separator: "&"))"
-            print(escapedURL)
-            return escapedURL
+            return "?\(keyValuePairs.joined(separator: "&"))"
         }
     }
 
