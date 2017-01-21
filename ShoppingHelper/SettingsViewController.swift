@@ -9,16 +9,26 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var distanceControl: UISegmentedControl!
+    @IBOutlet weak var storeNumberControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loadSettings()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func loadSettings() {
+        
     }
+    
+    @IBAction func saveSettings(_ sender: Any) {
+        let maxDistance = Int(distanceControl.titleForSegment(at: distanceControl.selectedSegmentIndex)!)
+        let maxStores = Int(storeNumberControl.titleForSegment(at: storeNumberControl.selectedSegmentIndex)!)
+        
+        print(maxDistance ?? 5, maxStores ?? 20)
+    }
+    
 
 }

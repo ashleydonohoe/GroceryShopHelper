@@ -37,7 +37,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getStoreData()
+        checkForLocation()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +74,11 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(action)
                 self.present(alertController, animated: true, completion: nil)
+                
+                performUIUpdatesOnMain {
+                    self.activity.isHidden = true
+                    self.activity.stopAnimating()
+                }
             }
         }
         
@@ -85,6 +90,17 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func refresh(_ sender: Any) {
-        getStoreData()
+        checkForLocation()
+    }
+    
+    func checkForLocation() {
+        if googleMapsAPI.userLatitude != nil && googleMapsAPI.userLongitude != nil {
+            getStoreData()
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Could not get user location: Please enable Location Services", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+        }
     }
 }

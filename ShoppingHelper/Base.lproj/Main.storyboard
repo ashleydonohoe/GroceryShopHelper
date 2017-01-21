@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C2I-FN-0gX" id="yNq-GE-Kp9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -58,8 +58,9 @@
                                     <outlet property="delegate" destination="dtT-rd-4Z1" id="bZS-eJ-HAk"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
+                            <activityIndicatorView hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -69,8 +70,6 @@
                             <constraint firstItem="Fsu-wt-243" firstAttribute="top" secondItem="5w6-dA-Tv4" secondAttribute="bottom" id="AVg-FC-qTP"/>
                             <constraint firstAttribute="trailing" secondItem="5w6-dA-Tv4" secondAttribute="trailing" id="Exm-gF-GFc"/>
                             <constraint firstItem="5w6-dA-Tv4" firstAttribute="leading" secondItem="aKK-bM-acP" secondAttribute="leading" id="ZeA-4g-lmC"/>
-                            <constraint firstItem="dKj-Kd-kG2" firstAttribute="centerX" secondItem="aKK-bM-acP" secondAttribute="centerX" id="om9-Ri-0tN"/>
-                            <constraint firstItem="dKj-Kd-kG2" firstAttribute="centerY" secondItem="aKK-bM-acP" secondAttribute="centerY" id="vWZ-KX-3kW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby Stores" image="nearby" id="A74-Ab-nHp"/>
@@ -216,20 +215,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-3C-hmx">
-                                <rect key="frame" x="111" y="76" width="153.5" height="53.5"/>
+                                <rect key="frame" x="83.5" y="76" width="209" height="53.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Store Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkK-7T-3nY">
-                                        <rect key="frame" x="0.0" y="0.0" width="153.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Store Distance (miles):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkK-7T-3nY">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hyb-Z6-BJ2">
-                                        <rect key="frame" x="0.0" y="25.5" width="153.5" height="29"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="209" height="29"/>
                                         <segments>
-                                            <segment title="3 mi"/>
-                                            <segment title="5 mi"/>
-                                            <segment title="10 mi "/>
+                                            <segment title="3"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
                                         </segments>
                                         <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
@@ -268,8 +267,15 @@
                     <navigationItem key="navigationItem" title="Settings" id="o8u-Z4-M9t">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0ea-dL-6Hb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveSettings:" destination="42H-0w-SCe" id="1BV-Ja-pOh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="distanceControl" destination="hyb-Z6-BJ2" id="kOa-CH-UM0"/>
+                        <outlet property="storeNumberControl" destination="D2N-Ce-4Ff" id="06F-zE-2sW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLF-vU-cT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
