@@ -20,6 +20,7 @@
 		E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7501E25E66E006C5C3E /* ItemModel.swift */; };
 		E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */; };
 		E03D53EC1E2B34B800C29919 /* bacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03D53EB1E2B34B800C29919 /* bacon.jpg */; };
+		E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
 		E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE84D1E308CD000A64562 /* Constants.swift */; };
 		E0FDE8511E30927D00A64562 /* GooglePlacesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */; };
@@ -42,6 +43,7 @@
 		E01DE7501E25E66E006C5C3E /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeForLater.swift; sourceTree = "<group>"; };
 		E03D53EB1E2B34B800C29919 /* bacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon.jpg; sourceTree = "<group>"; };
+		E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingHelper.xcdatamodel; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
 		E0FDE84D1E308CD000A64562 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIClient.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				E01DE7371E24B4BB006C5C3E /* LaunchScreen.storyboard */,
 				E01DE73A1E24B4BB006C5C3E /* Info.plist */,
 				E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */,
+				E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */,
 			);
 			path = ShoppingHelper;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
 				E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */,
 				E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */,
+				E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */,
 				E01DE72F1E24B4BB006C5C3E /* AppDelegate.swift in Sources */,
 				E01DE7481E25B981006C5C3E /* SettingsViewController.swift in Sources */,
 				E01DE7441E25B958006C5C3E /* GroceryListViewController.swift in Sources */,
@@ -379,6 +383,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */,
+			);
+			currentVersion = E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */;
+			path = ShoppingHelper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E01DE7231E24B4BB006C5C3E /* Project object */;
 }
