@@ -11,7 +11,7 @@ import UIKit
 class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var itemName: UITextField!
-    @IBOutlet weak var itemCategory: UITextField!
+    @IBOutlet weak var itemCategory: UISegmentedControl!
     @IBOutlet weak var itemQuantity: UITextField!
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var itemImagePreview: UIImageView!
@@ -21,7 +21,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         // Do any additional setup after loading the view.
         itemName.delegate = self
-        itemCategory.delegate = self
         itemQuantity.delegate = self
         itemPrice.delegate = self
     }
@@ -56,7 +55,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func save() {
-        if let itemName = itemName.text, let itemCategory = itemCategory.text, let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!), let itemImage = itemImagePreview.image {
+        if let itemName = itemName.text, let itemCategory = itemCategory.titleForSegment(at: itemCategory.selectedSegmentIndex), let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!), let itemImage = itemImagePreview.image {
             
             let newItem = Item(name: itemName, category: itemCategory, quantity: itemQuantity, price: itemPrice, image: itemImage, favorite: false)
             print(newItem)
