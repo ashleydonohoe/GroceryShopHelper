@@ -322,29 +322,39 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" textLabel="mpS-7B-c5b" detailTextLabel="pf9-Hd-Tuv" rowHeight="46" style="IBUITableViewCellStyleValue1" id="PLZ-MH-cCs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" rowHeight="46" id="PLZ-MH-cCs" customClass="ItemCell" customModule="ShoppingHelper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLZ-MH-cCs" id="KpN-4R-CQf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mpS-7B-c5b">
-                                                    <rect key="frame" x="15" y="13" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pf9-Hd-Tuv">
-                                                    <rect key="frame" x="316" y="13" width="44" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed" translatesAutoresizingMaskIntoConstraints="NO" id="BmI-AP-cM4">
+                                                    <rect key="frame" x="8" y="7" width="31" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="31" id="D07-BD-13w"/>
+                                                        <constraint firstAttribute="height" constant="31" id="jUy-UP-hK6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-Y9-L50">
+                                                    <rect key="frame" x="47" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nPf-Y9-L50" secondAttribute="trailing" constant="8" id="2Hf-IQ-NXx"/>
+                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="top" secondItem="KpN-4R-CQf" secondAttribute="topMargin" constant="4" id="7Li-2f-3sz"/>
+                                                <constraint firstItem="BmI-AP-cM4" firstAttribute="leading" secondItem="KpN-4R-CQf" secondAttribute="leading" constant="8" id="F3T-dX-dIP"/>
+                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="leading" secondItem="BmI-AP-cM4" secondAttribute="trailing" constant="8" id="Jz9-2B-ai2"/>
+                                                <constraint firstItem="BmI-AP-cM4" firstAttribute="top" secondItem="KpN-4R-CQf" secondAttribute="top" constant="7" id="cUT-V3-jTl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemNameLabel" destination="nPf-Y9-L50" id="8kU-Lg-V9b"/>
+                                            <outlet property="itemStatus" destination="BmI-AP-cM4" id="ZY4-1d-agI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -379,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25F-id-fFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="-868"/>
+            <point key="canvasLocation" x="132" y="-868.51574212893559"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="d3w-AK-cxu">
@@ -727,6 +737,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="completed" width="100" height="100"/>
         <image name="nearby" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
         <image name="shopping-cart-add" width="30" height="30"/>

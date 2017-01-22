@@ -65,6 +65,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             newItem.quantity = Int32(itemQuantity)
             newItem.favorite = false
             newItem.image = nil
+            newItem.completed = false
             if let itemImage = itemImagePreview.image {
                 newItem.image = itemImage
             }

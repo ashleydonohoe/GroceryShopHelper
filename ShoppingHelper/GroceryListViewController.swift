@@ -44,10 +44,16 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     // TODO: Make custom cell to show item name and price
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "ItemCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as! ItemCell
         let groceryItem = fetchedResultsController.object(at: indexPath)
-        cell.textLabel?.text = groceryItem.name
-        cell.detailTextLabel?.text = "$\(groceryItem.price)"
+        // Show title and image based on status
+        cell.itemNameLabel.text = groceryItem.name
+        
+        if groceryItem.completed {
+            cell.itemStatus.image = UIImage(named: "completed")
+        } else {
+            cell.itemStatus.image = UIImage(named: "notcompleted")
+        }
         return cell
     }
     
@@ -99,6 +105,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         groceryItem.favorite = true
         groceryItem.image = UIImage(named: "bacon.jpg")
         groceryItem.category = "Dairy"
+        groceryItem.completed = false
         
         appDelegate.saveContext()
         
