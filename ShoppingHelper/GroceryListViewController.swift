@@ -23,6 +23,9 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
         
+//        addTestItem()
+        fetchGroceryListData()
+        
     }
     
     func addItem() {
@@ -32,19 +35,28 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // TODO: Later update to account for categories
     func numberOfSections(in tableView: UITableView) -> Int {
+        if let sections = fetchedResultsController.sections {
+            return sections.count
+        }
         return 0
     }
     
-    // TODO: Make custom cell to show item name, price, quantity, and image
+    // TODO: Make custom cell to show item name and price
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "ItemCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as UITableViewCell
-//        let item = self.sampleItems[(indexPath as NSIndexPath).row]
-//        cell.textLabel?.text = item.name
+        let groceryItem = fetchedResultsController.object(at: indexPath)
+        cell.textLabel?.text = groceryItem.name
+        cell.detailTextLabel?.text = "$\(groceryItem.price)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let sections = fetchedResultsController.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
+        
         return 0
     }
     
@@ -63,7 +75,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             fetchRequest.predicate = NSPredicate(format: "favorite == %@", true as CVarArg)
         }
         
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
         fetchedResultsController.delegate = self
         
@@ -77,5 +89,17 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             alertController.addAction(action)
             present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func addTestItem() {
+        let groceryItem = GroceryItem(context: context)
+        groceryItem.name = "Bacon"
+        groceryItem.price = 3.99
+        groceryItem.quantity = 3
+        groceryItem.favorite = true
+        groceryItem.image = UIImage(named: "bacon.jpg")
+        
+        appDelegate.saveContext()
+        
     }
 }

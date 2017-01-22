@@ -33,7 +33,9 @@ extension GroceryListViewController {
         case .update:
             if let indexPath = indexPath {
                 let cell = groceryItemTable.cellForRow(at: indexPath)
-                // TODO: update cell data
+                let groceryItem = fetchedResultsController.object(at: indexPath)
+                cell?.textLabel?.text = groceryItem.name
+                cell?.detailTextLabel?.text = "$\(groceryItem.price)"
             }
             break
         case .move:
