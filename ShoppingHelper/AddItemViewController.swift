@@ -52,13 +52,29 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func saveItem(_ sender: Any) {
        save()
+        dismiss(animated: true, completion: nil)
     }
     
     func save() {
-        if let itemName = itemName.text, let itemCategory = itemCategory.titleForSegment(at: itemCategory.selectedSegmentIndex), let itemQuantity = Int(itemQuantity.text!), let itemPrice = Double(itemPrice.text!), let itemImage = itemImagePreview.image {
+        if let itemName = itemName.text, let itemCategory = itemCategory.titleForSegment(at: itemCategory.selectedSegmentIndex), let itemQuantity = Int(itemQuantity.text!), let itemPrice = itemPrice.text {
+            let newItem = GroceryItem(context: context)
+            newItem.category = itemCategory
+            newItem.name = itemName
+            let convertedPrice = (itemPrice as NSString).doubleValue
+            newItem.price = convertedPrice
+            newItem.quantity = Int32(itemQuantity)
+            newItem.favorite = false
+            newItem.image = nil
+            if let itemImage = itemImagePreview.image {
+                newItem.image = itemImage
+            }
             
-            let newItem = Item(name: itemName, category: itemCategory, quantity: itemQuantity, price: itemPrice, image: itemImage, favorite: false)
-            print(newItem)
+            appDelegate.saveContext()
+        } else {
+          let alertController = UIAlertController(title: "Cannot Save Item", message: "Name, Category, Quantity, and Price Required", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
         }
     }
     

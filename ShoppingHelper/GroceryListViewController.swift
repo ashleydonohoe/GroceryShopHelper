@@ -98,6 +98,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         groceryItem.quantity = 3
         groceryItem.favorite = true
         groceryItem.image = UIImage(named: "bacon.jpg")
+        groceryItem.category = "Dairy"
         
         appDelegate.saveContext()
         
