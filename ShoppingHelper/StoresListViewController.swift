@@ -19,6 +19,11 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         // Setting up location manager to get permission
         locationManager = CLLocationManager()
@@ -31,12 +36,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
             googleMapsAPI.userLatitude = location.latitude
             googleMapsAPI.userLongitude = location.longitude
         }
-        
 
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         checkForLocation()
     }
     
@@ -91,6 +91,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBAction func refresh(_ sender: Any) {
         checkForLocation()
+        storesTable.reloadData()
     }
     
     func checkForLocation() {

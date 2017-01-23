@@ -40,6 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         self.saveContext()
     }
+    
+    // Method adapted from IOS Persistance and Core Data course to check if the app launched before
+    func checkIfFirstLaunch() {
+        if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") {
+            print("This is not the first launch!")
+        } else {
+            print("This is the first launch!")
+            UserDefaults.standard.set(5000, forKey: "maxStoreDistance") // Sets a default 5000m/3mi for store distance
+            UserDefaults.standard.synchronize()
+        }
+    }
 
     // MARK: - Core Data stack
     
