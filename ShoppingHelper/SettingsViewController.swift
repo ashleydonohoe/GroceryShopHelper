@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var distanceControl: UISegmentedControl!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,16 @@ class SettingsViewController: UIViewController {
 
     
     func loadSettings() {
-        
+        let currentDistance = UserDefaults.standard.value(forKey: "maxStoreDistance") as! Int
+        print(currentDistance)
+        if currentDistance == 5000 {
+            distanceControl.selectedSegmentIndex = 0
+        } else if currentDistance == 8000 {
+            distanceControl.selectedSegmentIndex = 1
+        } else {
+            distanceControl.selectedSegmentIndex = 2
+        }
     }
-    
     @IBAction func saveSettings(_ sender: Any) {
         let maxDistance = Int(distanceControl.titleForSegment(at: distanceControl.selectedSegmentIndex)!)
         
@@ -34,6 +42,8 @@ class SettingsViewController: UIViewController {
         } else {
             distanceInMeters = 16000
         }
+        
+        print("Saving maxDistance: \(distanceInMeters)")
         
         UserDefaults.standard.set(distanceInMeters, forKey: "maxStoreDistance")
         UserDefaults.standard.synchronize()

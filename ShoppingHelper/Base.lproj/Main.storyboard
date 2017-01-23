@@ -233,31 +233,9 @@
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Niw-K8-xfH">
-                                <rect key="frame" x="114" y="155" width="147" height="53.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Stores Shown:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arT-G4-dRs">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D2N-Ce-4Ff">
-                                        <rect key="frame" x="0.0" y="25.5" width="147" height="29"/>
-                                        <segments>
-                                            <segment title="5"/>
-                                            <segment title="10"/>
-                                            <segment title="20"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Niw-K8-xfH" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="byX-bZ-ax7"/>
-                            <constraint firstItem="Niw-K8-xfH" firstAttribute="top" secondItem="BwT-3C-hmx" secondAttribute="bottom" constant="25" id="rE2-55-Y7Z"/>
                             <constraint firstItem="BwT-3C-hmx" firstAttribute="centerX" secondItem="XSd-5A-LD2" secondAttribute="centerX" id="uM3-Op-6qH"/>
                             <constraint firstItem="BwT-3C-hmx" firstAttribute="top" secondItem="G74-pT-aWK" secondAttribute="bottom" constant="12" id="zi7-lp-hz2"/>
                         </constraints>
@@ -273,7 +251,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="distanceControl" destination="hyb-Z6-BJ2" id="kOa-CH-UM0"/>
-                        <outlet property="storeNumberControl" destination="D2N-Ce-4Ff" id="06F-zE-2sW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLF-vU-cT8" userLabel="First Responder" sceneMemberID="firstResponder"/>

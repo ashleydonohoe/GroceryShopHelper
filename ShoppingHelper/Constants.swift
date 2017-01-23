@@ -29,7 +29,7 @@ struct Constants {
         static let LocationType = "grocery_or_supermarket"
         static let OpenStatus = true
         static let QueryItem = "grocery+stores"
-        static let RadiusValue = UserDefaults.standard.value(forKey: "maxStoreDistance") ?? 5000 // Gets user's max store distance from settings
+        static var RadiusValue = UserDefaults.standard.value(forKey: "maxStoreDistance") as! Int // Gets user's max store distance from settings
         static let Coordinates = "\(GooglePlacesAPIClient.sharedInstance().userLatitude!), \(GooglePlacesAPIClient.sharedInstance().userLongitude!)"
 
     }
