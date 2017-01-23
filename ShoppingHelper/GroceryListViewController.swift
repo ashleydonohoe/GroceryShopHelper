@@ -49,11 +49,6 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         // Show title and image based on status
         cell.itemNameLabel.text = groceryItem.name
         
-        if groceryItem.completed {
-            cell.itemStatus.image = UIImage(named: "completed")
-        } else {
-            cell.itemStatus.image = UIImage(named: "notcompleted")
-        }
         return cell
     }
     
