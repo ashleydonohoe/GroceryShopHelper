@@ -10,7 +10,7 @@ import UIKit
 
 class GroceryItemDetailViewController: UIViewController {
     
-    var item:Item?
+    var item:GroceryItem?
     
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemCategoryLabel: UILabel!
@@ -24,9 +24,9 @@ class GroceryItemDetailViewController: UIViewController {
 
         if let item = item {
             itemNameLabel.text = item.name
-            itemCategoryLabel.text = "Category: " + item.category
+            itemCategoryLabel.text = "Category: " + item.category!
             if let image = item.image {
-                itemImage.image = image
+               itemImage.image = image as? UIImage ?? nil
             }
             quantityLabel.text = String(item.quantity)
             priceLabel.text = "$" + String(item.price)

@@ -64,6 +64,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GroceryItemDetailViewController") as! GroceryItemDetailViewController
 //        controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
+        controller.item = fetchedResultsController.object(at: indexPath)
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
