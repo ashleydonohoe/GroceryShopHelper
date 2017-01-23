@@ -19,7 +19,6 @@
 		E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74D1E25B9BD006C5C3E /* Store.swift */; };
 		E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7501E25E66E006C5C3E /* ItemModel.swift */; };
 		E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */; };
-		E03D53EC1E2B34B800C29919 /* bacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03D53EB1E2B34B800C29919 /* bacon.jpg */; };
 		E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */; };
 		E05232FF1E33106800744906 /* CoreDataTableViewMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
@@ -44,7 +43,6 @@
 		E01DE74D1E25B9BD006C5C3E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E01DE7501E25E66E006C5C3E /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeForLater.swift; sourceTree = "<group>"; };
-		E03D53EB1E2B34B800C29919 /* bacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon.jpg; sourceTree = "<group>"; };
 		E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingHelper.xcdatamodel; sourceTree = "<group>"; };
 		E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewMethods.swift; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				E01DE7411E25B940006C5C3E /* Controller */,
 				E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */,
 				E01DE7321E24B4BB006C5C3E /* Main.storyboard */,
-				E03D53EB1E2B34B800C29919 /* bacon.jpg */,
 				E01DE7351E24B4BB006C5C3E /* Assets.xcassets */,
 				E01DE7371E24B4BB006C5C3E /* LaunchScreen.storyboard */,
 				E01DE73A1E24B4BB006C5C3E /* Info.plist */,
@@ -204,7 +201,6 @@
 				E01DE7391E24B4BB006C5C3E /* LaunchScreen.storyboard in Resources */,
 				E01DE7361E24B4BB006C5C3E /* Assets.xcassets in Resources */,
 				E01DE7341E24B4BB006C5C3E /* Main.storyboard in Resources */,
-				E03D53EC1E2B34B800C29919 /* bacon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
