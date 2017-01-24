@@ -306,18 +306,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-Y9-L50">
-                                                    <rect key="frame" x="50" y="12" width="325" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-Y9-L50">
+                                                    <rect key="frame" x="8" y="12" width="367" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="top" secondItem="KpN-4R-CQf" secondAttribute="top" constant="12" id="Lcz-Kq-Z5b"/>
-                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="leading" secondItem="KpN-4R-CQf" secondAttribute="leading" constant="50" id="Mtl-fa-TJX"/>
-                                                <constraint firstAttribute="bottom" secondItem="nPf-Y9-L50" secondAttribute="bottom" constant="12.5" id="vFM-xt-E2i"/>
-                                                <constraint firstAttribute="trailing" secondItem="nPf-Y9-L50" secondAttribute="trailing" id="vM0-mg-gmm"/>
+                                                <constraint firstAttribute="trailing" secondItem="nPf-Y9-L50" secondAttribute="trailing" id="3CG-N9-9vD"/>
+                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="top" secondItem="KpN-4R-CQf" secondAttribute="top" constant="12" id="aVV-B7-Eps"/>
+                                                <constraint firstItem="nPf-Y9-L50" firstAttribute="leading" secondItem="KpN-4R-CQf" secondAttribute="leading" constant="8" id="lP3-Q1-4ME"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -374,29 +373,32 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="5dA-B5-AYo">
                                 <rect key="frame" x="0.0" y="72" width="375" height="541"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bwq-8L-hUh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bwq-8L-hUh">
                                         <rect key="frame" x="126" y="0.0" width="123.5" height="174.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U7x-06-61N">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="87"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-AK-98w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="87"/>
                                                         <state key="normal" image="starfilled"/>
+                                                        <connections>
+                                                            <action selector="changeFavorite:" destination="5ob-Vo-mgn" eventType="touchUpInside" id="Cpw-tD-QLX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OQl-Tj-aTf">
-                                                <rect key="frame" x="0.0" y="65" width="123.5" height="109.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OQl-Tj-aTf">
+                                                <rect key="frame" x="0.0" y="87" width="123.5" height="87.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kug-cS-tRi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="44"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <color key="textColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Meat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-xb-VF9">
-                                                        <rect key="frame" x="0.0" y="89" width="123.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="44" width="123.5" height="43.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -467,6 +469,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favoriteButton" destination="8sX-AK-98w" id="WS6-Td-9rb"/>
                         <outlet property="itemCategoryLabel" destination="i7Z-xb-VF9" id="fuA-oO-s5k"/>
                         <outlet property="itemImage" destination="SCp-y5-IY6" id="Pon-ie-xYf"/>
                         <outlet property="itemNameLabel" destination="Kug-cS-tRi" id="pS6-aB-Bud"/>

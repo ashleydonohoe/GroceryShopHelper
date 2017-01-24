@@ -12,6 +12,7 @@ class GroceryItemDetailViewController: UIViewController {
     
     var item:GroceryItem?
     
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemCategoryLabel: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
@@ -20,20 +21,39 @@ class GroceryItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadGroceryItemDetails()
 
+    }
+    @IBAction func changeFavorite(_ sender: Any) {
+        let currentItem = item!
+        let currentStatus = item!.favorite
+        currentItem.favorite = !currentStatus
+        if item!.favorite {
+            favoriteButton.setImage(UIImage(named: "starfilled"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(named: "starnofill"), for: .normal)
+        }
+        
+        appDelegate.saveContext()
+    }
+    
+    func loadGroceryItemDetails() {
+        
         if let item = item {
+            print(item)
             itemNameLabel.text = item.name
             itemCategoryLabel.text = "Category: " + item.category!
             if let image = item.image {
-               itemImage.image = image as? UIImage ?? nil
+                itemImage.image = image as? UIImage ?? nil
             }
             quantityLabel.text = String(item.quantity)
             priceLabel.text = "$" + String(item.price)
-//            if item.favorite {
-//                favoriteLabel.text = "Yes"
-//            } else {
-//                favoriteLabel.text = "No"
-//            }
+            if item.favorite {
+                favoriteButton.setImage(UIImage(named: "starfilled"), for: .normal)
+            } else {
+                favoriteButton.setImage(UIImage(named: "starnofill"), for: .normal)
+            }
         }
+
     }
 }
