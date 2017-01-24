@@ -17,7 +17,6 @@ class GroceryItemDetailViewController: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var favoriteLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +29,11 @@ class GroceryItemDetailViewController: UIViewController {
             }
             quantityLabel.text = String(item.quantity)
             priceLabel.text = "$" + String(item.price)
-            if item.favorite {
-                favoriteLabel.text = "Yes"
-            } else {
-                favoriteLabel.text = "No"
-            }
+//            if item.favorite {
+//                favoriteLabel.text = "Yes"
+//            } else {
+//                favoriteLabel.text = "No"
+//            }
         }
     }
 }
