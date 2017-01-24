@@ -11,8 +11,6 @@ import CoreData
 
 class GroceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
-//    var sampleItems: [Item] = [Item(name: "Bacon", category: "Meat", quantity: 2, price: 3.99, image: UIImage(named: "bacon.jpg")!, favorite: false), Item(name: "Cereal", category: "Grains", quantity: 1, price: 3.89, image: nil, favorite: true) ]
-    
     @IBOutlet weak var sortControl: UISegmentedControl!
     @IBOutlet weak var groceryItemTable: UITableView!
     
@@ -22,10 +20,13 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
-        
-//        addTestItem()
         fetchGroceryListData()
-        
+        groceryItemTable.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        groceryItemTable.reloadData()
     }
     
     func addItem() {
@@ -48,6 +49,11 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         let groceryItem = fetchedResultsController.object(at: indexPath)
         // Show title and image based on status
         cell.itemNameLabel.text = groceryItem.name
+        if groceryItem.favorite {
+            cell.favoriteImage.image = UIImage(named: "starfilled")
+        } else {
+            cell.favoriteImage.image = UIImage(named: "starnofill")
+        }
         
         return cell
     }
@@ -63,7 +69,6 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "GroceryItemDetailViewController") as! GroceryItemDetailViewController
-//        controller.item = sampleItems[(indexPath as NSIndexPath).row] as Item
         controller.item = fetchedResultsController.object(at: indexPath)
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -91,19 +96,5 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             alertController.addAction(action)
             present(alertController, animated: true, completion: nil)
         }
-    }
-    
-    func addTestItem() {
-        let groceryItem = GroceryItem(context: context)
-        groceryItem.name = "Bacon"
-        groceryItem.price = 3.99
-        groceryItem.quantity = 3
-        groceryItem.favorite = true
-        groceryItem.image = UIImage(named: "bacon.jpg")
-        groceryItem.category = "Dairy"
-        groceryItem.completed = false
-        
-        appDelegate.saveContext()
-        
     }
 }

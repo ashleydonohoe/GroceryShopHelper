@@ -33,14 +33,14 @@ class GroceryItemDetailViewController: UIViewController {
         } else {
             favoriteButton.setImage(UIImage(named: "starnofill"), for: .normal)
         }
-        
+        print("After: \(item)")
         appDelegate.saveContext()
     }
     
     func loadGroceryItemDetails() {
         
         if let item = item {
-            print(item)
+            print("Before: \(item)")
             itemNameLabel.text = item.name
             itemCategoryLabel.text = "Category: " + item.category!
             if let image = item.image {
@@ -53,7 +53,9 @@ class GroceryItemDetailViewController: UIViewController {
             } else {
                 favoriteButton.setImage(UIImage(named: "starnofill"), for: .normal)
             }
+            
         }
+        
 
     }
 }
