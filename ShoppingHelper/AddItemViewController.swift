@@ -10,6 +10,7 @@ import UIKit
 
 class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var addImage: UIButton!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemCategory: UISegmentedControl!
     @IBOutlet weak var itemQuantity: UITextField!
@@ -47,6 +48,8 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             itemImagePreview.image = image
         }
+        
+        addImage.isHidden = true
         dismiss(animated: true, completion: nil)
     }
     

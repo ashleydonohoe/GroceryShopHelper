@@ -12,7 +12,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var distanceControl: UISegmentedControl!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSettings()
@@ -47,6 +46,15 @@ class SettingsViewController: UIViewController {
         
         UserDefaults.standard.set(distanceInMeters, forKey: "maxStoreDistance")
         UserDefaults.standard.synchronize()
+        
+       showAlert(title: "Success", message: "Settings Saved")
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
     }
     
     
