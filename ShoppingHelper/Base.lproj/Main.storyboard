@@ -84,6 +84,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activity" destination="dKj-Kd-kG2" id="YbV-tc-Tff"/>
+                        <outlet property="refreshButton" destination="LyY-ik-Xpj" id="r7e-Xc-LzG"/>
                         <outlet property="storesTable" destination="5w6-dA-Tv4" id="PS0-H3-LSn"/>
                         <segue destination="7cs-Bk-gaX" kind="show" identifier="StoreDetails" id="pdu-ZF-ORp"/>
                     </connections>

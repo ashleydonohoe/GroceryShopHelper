@@ -11,8 +11,10 @@ import CoreLocation
 
 class StoresListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var storesTable: UITableView!
+    
     let googleMapsAPI = GooglePlacesAPIClient.sharedInstance()
     var storesList = [Store]()
     var locationManager: CLLocationManager?
@@ -21,11 +23,6 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         activity.isHidden = true
-
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         // Setting up location manager to get permission
         locationManager = CLLocationManager()
@@ -33,6 +30,11 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.startUpdatingLocation()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if let location = locationManager?.location?.coordinate {
             googleMapsAPI.userLatitude = location.latitude
@@ -61,6 +63,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func getStoreData() {
+        self.refreshButton.isEnabled = false
         activity.isHidden = false
         activity.startAnimating()
         
@@ -69,26 +72,24 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.storesList = self.googleMapsAPI.stores
                 
                 performUIUpdatesOnMain {
+                    self.activity.stopAnimating()
+                    self.activity.isHidden = true
                     self.storesTable.reloadData()
+                    self.refreshButton.isEnabled = true
                 }
             } else {
-                let alertController = UIAlertController(title: "Error", message: "Could not download store locations", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
-                
                 performUIUpdatesOnMain {
+                    let alertController = UIAlertController(title: "Error", message: "Could not download store locations", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(action)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    self.refreshButton.isEnabled = true
                     self.activity.isHidden = true
                     self.activity.stopAnimating()
                 }
             }
         }
-        
-        performUIUpdatesOnMain {
-            self.activity.isHidden = true
-            self.activity.stopAnimating()
-        }
-
     }
     
     @IBAction func refresh(_ sender: Any) {
