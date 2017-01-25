@@ -62,6 +62,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    // Obtains the store data from Google Maps API
     func getStoreData() {
         self.refreshButton.isEnabled = false
         activity.isHidden = false
@@ -79,7 +80,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             } else {
                 performUIUpdatesOnMain {
-                    let alertController = UIAlertController(title: "Error", message: "Could not download store locations", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Error", message: "Could not download store locations. Please check your Internet connection.", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                     alertController.addAction(action)
                     self.present(alertController, animated: true, completion: nil)
@@ -92,11 +93,13 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    // Allows user to refresh stores
     @IBAction func refresh(_ sender: Any) {
         checkForLocation()
         storesTable.reloadData()
     }
     
+    // Checks user location and then gets the store data
     func checkForLocation() {
         if googleMapsAPI.userLatitude != nil && googleMapsAPI.userLongitude != nil {
             getStoreData()

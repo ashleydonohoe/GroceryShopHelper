@@ -47,7 +47,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(distanceInMeters, forKey: "maxStoreDistance")
         UserDefaults.standard.synchronize()
         
-       showAlert(title: "Success", message: "Settings Saved")
+       showAlert(title: "Success", message: "Updated settings")
     }
     
     func showAlert(title: String, message: String) {

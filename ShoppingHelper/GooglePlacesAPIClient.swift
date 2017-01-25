@@ -29,7 +29,7 @@ class GooglePlacesAPIClient: NSObject {
         let methodParameters:[String:Any] = [
             Constants.ParameterKeys.APIKey: Constants.ParameterValues.APIKey,
             Constants.ParameterKeys.Query: Constants.ParameterValues.QueryItem,
-            Constants.ParameterKeys.Radius: Constants.ParameterValues.RadiusValue,
+            Constants.ParameterKeys.Radius: UserDefaults.standard.value(forKey: "maxStoreDistance") as! Int,
             Constants.ParameterKeys.OpenStatus: Constants.ParameterValues.OpenStatus,
             Constants.ParameterKeys.Location: Constants.ParameterValues.Coordinates
         ]
@@ -93,6 +93,7 @@ class GooglePlacesAPIClient: NSObject {
             
             self.stores = Store.storesFromResults(results: storesDictionary)
             
+            // Considered success if at least 1 store is returned; else, no stores could be returned
             if self.stores.count > 0 {
                 completionHandlerForStores(true)
             }

@@ -61,6 +61,14 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func save() {
+        // Checks if the required fields, itemName and itemQuantity, are filled
+        if (itemName.text?.isEmpty)! || (itemQuantity.text?.isEmpty)! || (itemPrice.text?.isEmpty)! {
+            let alertController = UIAlertController(title: "Incomplete Data", message: "Item name, category, price and quantity are both required fields", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)
+        }
+        
         if let itemName = itemName.text, let itemCategory = itemCategory.titleForSegment(at: itemCategory.selectedSegmentIndex), let itemQuantity = Int(itemQuantity.text!), let itemPrice = itemPrice.text {
             let newItem = GroceryItem(context: context)
             newItem.category = itemCategory
@@ -77,11 +85,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             
             appDelegate.saveContext()
-        } else {
-          let alertController = UIAlertController(title: "Cannot Save Item", message: "Name, Category, Quantity, and Price Required", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
         }
     }
 }

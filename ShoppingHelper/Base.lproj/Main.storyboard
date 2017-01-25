@@ -58,9 +58,8 @@
                                     <outlet property="delegate" destination="dtT-rd-4Z1" id="bZS-eJ-HAk"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
-                                <rect key="frame" x="170" y="316" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
+                                <rect key="frame" x="169" y="197" width="37" height="37"/>
                                 <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="color" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -68,7 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5w6-dA-Tv4" firstAttribute="top" secondItem="aKK-bM-acP" secondAttribute="top" id="0yg-bC-UZp"/>
+                            <constraint firstItem="dKj-Kd-kG2" firstAttribute="top" secondItem="aUx-Sz-5wh" secondAttribute="bottom" constant="133" id="9ae-F7-HN4"/>
                             <constraint firstItem="Fsu-wt-243" firstAttribute="top" secondItem="5w6-dA-Tv4" secondAttribute="bottom" id="AVg-FC-qTP"/>
+                            <constraint firstItem="dKj-Kd-kG2" firstAttribute="centerX" secondItem="aKK-bM-acP" secondAttribute="centerX" id="EJV-Fb-E36"/>
                             <constraint firstAttribute="trailing" secondItem="5w6-dA-Tv4" secondAttribute="trailing" id="Exm-gF-GFc"/>
                             <constraint firstItem="5w6-dA-Tv4" firstAttribute="leading" secondItem="aKK-bM-acP" secondAttribute="leading" id="ZeA-4g-lmC"/>
                         </constraints>
