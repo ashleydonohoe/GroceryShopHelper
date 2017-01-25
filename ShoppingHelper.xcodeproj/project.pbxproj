@@ -18,7 +18,6 @@
 		E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */; };
 		E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE74D1E25B9BD006C5C3E /* Store.swift */; };
 		E01DE7511E25E66E006C5C3E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7501E25E66E006C5C3E /* ItemModel.swift */; };
-		E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */; };
 		E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */; };
 		E05232FF1E33106800744906 /* CoreDataTableViewMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
@@ -42,7 +41,6 @@
 		E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsViewController.swift; sourceTree = "<group>"; };
 		E01DE74D1E25B9BD006C5C3E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E01DE7501E25E66E006C5C3E /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
-		E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeForLater.swift; sourceTree = "<group>"; };
 		E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingHelper.xcdatamodel; sourceTree = "<group>"; };
 		E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewMethods.swift; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				E01DE7351E24B4BB006C5C3E /* Assets.xcassets */,
 				E01DE7371E24B4BB006C5C3E /* LaunchScreen.storyboard */,
 				E01DE73A1E24B4BB006C5C3E /* Info.plist */,
-				E01DE7521E26F0A9006C5C3E /* CodeForLater.swift */,
 				E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */,
 			);
 			path = ShoppingHelper;
@@ -224,7 +221,6 @@
 				E01DE72F1E24B4BB006C5C3E /* AppDelegate.swift in Sources */,
 				E01DE7481E25B981006C5C3E /* SettingsViewController.swift in Sources */,
 				E01DE7441E25B958006C5C3E /* GroceryListViewController.swift in Sources */,
-				E01DE7531E26F0A9006C5C3E /* CodeForLater.swift in Sources */,
 				E01DE74A1E25B99C006C5C3E /* AddItemViewController.swift in Sources */,
 				E0FDE8531E31C59A00A64562 /* GCDBlackBox.swift in Sources */,
 			);

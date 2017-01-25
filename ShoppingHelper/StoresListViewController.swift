@@ -19,6 +19,8 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activity.isHidden = true
 
     }
 

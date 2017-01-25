@@ -28,10 +28,12 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        unsubscribeFromKeyboardNotifications()
     }
     
     @IBAction func cancelItem(_ sender: Any) {
@@ -69,6 +71,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             newItem.favorite = false
             newItem.image = nil
             newItem.completed = false
+            
             if let itemImage = itemImagePreview.image {
                 newItem.image = itemImage
             }
@@ -81,6 +84,9 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             present(alertController, animated: true, completion: nil)
         }
     }
+}
+
+extension AddItemViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -90,8 +96,35 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         textField.resignFirstResponder()
         return true
     }
-}
-
-extension AddItemViewController {
     
+    // Keyboard hiding/showing methods taken from UIKit Fundamentals course with some adaptations to account for my form
+    func keyboardWillShow(_ notification:Notification) {
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            if itemQuantity.isFirstResponder || itemPrice.isFirstResponder {
+                view.frame.origin.y -= getKeyboardHeight(notification)
+            }
+        }
+    }
+    
+    // Hiding keyboard
+    func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
+    }
+    
+    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
+    }
+    
+    func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+
 }
