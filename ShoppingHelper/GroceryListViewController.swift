@@ -85,6 +85,10 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             appDelegate.saveContext()
         }
     }
+    @IBAction func segmentChanged(_ sender: Any) {
+        fetchGroceryListData()
+        groceryItemTable.reloadData()
+    }
     
     func fetchGroceryListData() {
         let fetchRequest: NSFetchRequest<GroceryItem> = GroceryItem.fetchRequest()

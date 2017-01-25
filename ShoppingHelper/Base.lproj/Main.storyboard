@@ -294,6 +294,9 @@
                                     <segment title="Favorite Items"/>
                                 </segments>
                                 <color key="tintColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="yxI-pl-pJp" eventType="valueChanged" id="fMz-FT-ndc"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhE-xd-1R4">
                                 <rect key="frame" x="0.0" y="108" width="375" height="510"/>
