@@ -73,6 +73,19 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete) {
+            print("you wanna delete this!")
+            let itemToRemove = fetchedResultsController.object(at: indexPath)
+            context.delete(itemToRemove)
+            appDelegate.saveContext()
+        }
+    }
+    
     func fetchGroceryListData() {
         let fetchRequest: NSFetchRequest<GroceryItem> = GroceryItem.fetchRequest()
         let showAllItems = NSSortDescriptor(key: "name", ascending: true)
