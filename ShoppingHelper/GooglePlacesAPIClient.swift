@@ -23,8 +23,8 @@ class GooglePlacesAPIClient: NSObject {
         return Singleton.sharedInstance
     }
     
+    // Network call to get store data based on user preference and location
     func getListOfStores(completionHandlerForStores: @escaping (_ success: Bool) -> Void) {
-        
         // Method parameters
         let methodParameters:[String:Any] = [
             Constants.ParameterKeys.APIKey: Constants.ParameterValues.APIKey,
@@ -98,14 +98,9 @@ class GooglePlacesAPIClient: NSObject {
                 completionHandlerForStores(true)
             }
         }
-        
-        
-        
         task.resume()
     }
-    
-    
-    
+
     // Function for escaping parameters, repurposed from SleepingInTheLibrary
     private func escapedParameters(parameters: [String: AnyObject]) -> String {
         if parameters.isEmpty {

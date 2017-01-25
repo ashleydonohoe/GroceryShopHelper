@@ -20,6 +20,8 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(GroceryListViewController.addItem))
+        
+        // gets grocery data and reloads table
         fetchGroceryListData()
         groceryItemTable.reloadData()
     }
@@ -29,12 +31,12 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         groceryItemTable.reloadData()
     }
     
+    // Shows screen to add a new item
     func addItem() {
         let controller = storyboard?.instantiateViewController(withIdentifier: "AddItemViewController") as! AddItemViewController
         self.present(controller, animated: true, completion: nil)
     }
     
-    // TODO: Later update to account for categories
     func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = fetchedResultsController.sections {
             return sections.count
@@ -42,12 +44,11 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         return 0
     }
     
-    // TODO: Make custom cell to show item name and price
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "ItemCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)! as UITableViewCell
         let groceryItem = fetchedResultsController.object(at: indexPath)
-        // Show title and image based on status
+        // Show title and image based on favorited status
         cell.textLabel?.text = groceryItem.name
         if groceryItem.favorite {
             cell.imageView?.image = UIImage(named: "starfilled")
@@ -79,17 +80,19 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if(editingStyle == UITableViewCellEditingStyle.delete) {
-            print("you wanna delete this!")
             let itemToRemove = fetchedResultsController.object(at: indexPath)
             context.delete(itemToRemove)
             appDelegate.saveContext()
         }
     }
+    
+    // Provides sorting based on segment
     @IBAction func segmentChanged(_ sender: Any) {
         fetchGroceryListData()
         groceryItemTable.reloadData()
     }
     
+    // Gets the GroceryItem objects from Core Data and sets the predicates
     func fetchGroceryListData() {
         let fetchRequest: NSFetchRequest<GroceryItem> = GroceryItem.fetchRequest()
         let showAllItems = NSSortDescriptor(key: "name", ascending: true)

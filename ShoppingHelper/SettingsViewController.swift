@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
         loadSettings()
     }
 
-    
+    // Loads the setting for the user's current distance. Conditional statement is used since Google Maps requires meters vs. miles
     func loadSettings() {
         let currentDistance = UserDefaults.standard.value(forKey: "maxStoreDistance") as! Int
         print(currentDistance)
@@ -29,6 +29,8 @@ class SettingsViewController: UIViewController {
             distanceControl.selectedSegmentIndex = 2
         }
     }
+    
+    // Saves user's setting for distance.  Conditional statement is used since Google Maps requires meters vs. miles
     @IBAction func saveSettings(_ sender: Any) {
         let maxDistance = Int(distanceControl.titleForSegment(at: distanceControl.selectedSegmentIndex)!)
         
@@ -42,22 +44,17 @@ class SettingsViewController: UIViewController {
             distanceInMeters = 16000
         }
         
-        print("Saving maxDistance: \(distanceInMeters)")
-        
         UserDefaults.standard.set(distanceInMeters, forKey: "maxStoreDistance")
         UserDefaults.standard.synchronize()
         
        showAlert(title: "Success", message: "Updated settings")
     }
     
+    // Shows the alert for settings being saved
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-
 }

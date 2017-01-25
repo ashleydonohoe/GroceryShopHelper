@@ -20,7 +20,6 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         itemName.delegate = self
         itemQuantity.delegate = self
         itemPrice.delegate = self
@@ -46,17 +45,20 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         present(pickerController, animated: true, completion: nil)
     }
     
+    // Allows user to select image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             itemImagePreview.image = image
         }
         
+        // Hides the select image button after choosing to prevent errors
         addImage.isHidden = true
         dismiss(animated: true, completion: nil)
     }
     
+    // Calls save method that does some error checking and then dismisses add item view
     @IBAction func saveItem(_ sender: Any) {
-       save()
+        save()
         dismiss(animated: true, completion: nil)
     }
     
@@ -69,19 +71,23 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             present(alertController, animated: true, completion: nil)
         }
         
+        
         if let itemName = itemName.text, let itemCategory = itemCategory.titleForSegment(at: itemCategory.selectedSegmentIndex), let itemQuantity = Int(itemQuantity.text!), let itemPrice = itemPrice.text {
             let newItem = GroceryItem(context: context)
             newItem.category = itemCategory
             newItem.name = itemName
-            let convertedPrice = (itemPrice as NSString).doubleValue
-            newItem.price = convertedPrice
-            newItem.quantity = Int32(itemQuantity)
-            newItem.favorite = false
-            newItem.image = nil
-            newItem.completed = false
             
+            // For numerical values, currently the app is set to only show number/decimal keyboards
+            newItem.price = Double(itemPrice)!
+            newItem.quantity = Int32(itemQuantity)
+            
+            newItem.favorite = false
+            
+            // Since images are optional, checks if one was set
             if let itemImage = itemImagePreview.image {
                 newItem.image = itemImage
+            } else {
+                newItem.image = nil
             }
             
             appDelegate.saveContext()
