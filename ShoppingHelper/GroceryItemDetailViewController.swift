@@ -22,24 +22,29 @@ class GroceryItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Loads info for selected item from tableview
         loadGroceryItemDetails()
 
     }
+    
+    // Allows user to update favorite status by tapping the star
     @IBAction func changeFavorite(_ sender: Any) {
         let currentItem = item!
         let currentStatus = item!.favorite
         currentItem.favorite = !currentStatus
+        
+        // Updates star icon based on favorite
         if item!.favorite {
             favoriteButton.setImage(UIImage(named: "starfilled"), for: .normal)
         } else {
             favoriteButton.setImage(UIImage(named: "starnofill"), for: .normal)
         }
+        
         print("After: \(item)")
         appDelegate.saveContext()
     }
     
     func loadGroceryItemDetails() {
-        
         if let item = item {
             print("Before: \(item)")
             itemNameLabel.text = item.name

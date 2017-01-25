@@ -31,6 +31,7 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocatio
         if let store = store {
             showStoreDetails(store: store)
             
+            // sets up the mapview with annotation for store
             let location = store.storeGeometry["location"] as! [String:Any]
             lat = CLLocationDegrees(location["lat"] as! Double)
             lng = CLLocationDegrees(location["lng"] as! Double)
@@ -47,7 +48,7 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocatio
         }
     }
 
-    // TODO: Add map and store details
+    // Adds store detail info
     func showStoreDetails(store: Store) {
         storeNameLabel.text = store.storeName
         storeAddressLabel.text = store.storeAddress
@@ -56,6 +57,8 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocatio
         priceRangeLabel.text = getPriceRange(price: store.storePriceLevel)
     }
     
+    
+    // Returns price range string
     func getPriceRange(price: Int) -> String {
         switch price {
         case 1:
@@ -71,6 +74,7 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocatio
         }
     }
     
+    // Creates text for star rating based on rating rounded to nearest Int
     func getStarRating(rating: Int) -> String {
         if rating == 0 {
             return "Not Rated"
@@ -99,8 +103,7 @@ class StoreDetailsViewController: UIViewController, MKMapViewDelegate, CLLocatio
     }
 
     
-    // This delegate method is implemented to respond to taps. It opens the system browser
-    // to the URL specified in the annotationViews subtitle property.
+   // Allows the annotation to respond to a tap and for the user to be able to open the Maps app for directions
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             let app = UIApplication.shared
