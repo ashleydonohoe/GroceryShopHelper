@@ -91,3 +91,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         return true
     }
 }
+
+extension AddItemViewController {
+    
+}
