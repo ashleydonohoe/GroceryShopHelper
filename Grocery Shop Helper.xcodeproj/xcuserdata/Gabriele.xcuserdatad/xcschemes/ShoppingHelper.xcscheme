@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E01DE72A1E24B4BB006C5C3E"
-               BuildableName = "ShoppingHelper.app"
-               BlueprintName = "ShoppingHelper"
-               ReferencedContainer = "container:ShoppingHelper.xcodeproj">
+               BuildableName = "Grocery Shop Helper.app"
+               BlueprintName = "Grocery Shop Helper"
+               ReferencedContainer = "container:Grocery Shop Helper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E01DE72A1E24B4BB006C5C3E"
-            BuildableName = "ShoppingHelper.app"
-            BlueprintName = "ShoppingHelper"
-            ReferencedContainer = "container:ShoppingHelper.xcodeproj">
+            BuildableName = "Grocery Shop Helper.app"
+            BlueprintName = "Grocery Shop Helper"
+            ReferencedContainer = "container:Grocery Shop Helper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E01DE72A1E24B4BB006C5C3E"
-            BuildableName = "ShoppingHelper.app"
-            BlueprintName = "ShoppingHelper"
-            ReferencedContainer = "container:ShoppingHelper.xcodeproj">
+            BuildableName = "Grocery Shop Helper.app"
+            BlueprintName = "Grocery Shop Helper"
+            ReferencedContainer = "container:Grocery Shop Helper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E01DE72A1E24B4BB006C5C3E"
-            BuildableName = "ShoppingHelper.app"
-            BlueprintName = "ShoppingHelper"
-            ReferencedContainer = "container:ShoppingHelper.xcodeproj">
+            BuildableName = "Grocery Shop Helper.app"
+            BlueprintName = "Grocery Shop Helper"
+            ReferencedContainer = "container:Grocery Shop Helper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

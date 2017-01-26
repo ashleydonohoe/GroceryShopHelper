@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E01DE72B1E24B4BB006C5C3E /* ShoppingHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01DE72B1E24B4BB006C5C3E /* Grocery Shop Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Shop Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01DE7331E24B4BB006C5C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E01DE7351E24B4BB006C5C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		E01DE7221E24B4BB006C5C3E = {
 			isa = PBXGroup;
 			children = (
-				E01DE72D1E24B4BB006C5C3E /* ShoppingHelper */,
+				E01DE72D1E24B4BB006C5C3E /* Grocery Shop Helper */,
 				E01DE72C1E24B4BB006C5C3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,12 +68,12 @@
 		E01DE72C1E24B4BB006C5C3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E01DE72B1E24B4BB006C5C3E /* ShoppingHelper.app */,
+				E01DE72B1E24B4BB006C5C3E /* Grocery Shop Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E01DE72D1E24B4BB006C5C3E /* ShoppingHelper */ = {
+		E01DE72D1E24B4BB006C5C3E /* Grocery Shop Helper */ = {
 			isa = PBXGroup;
 			children = (
 				E071BB721E3ABB15002802B5 /* Other */,
@@ -82,6 +82,7 @@
 				E01DE7421E25B945006C5C3E /* Model */,
 				E01DE7411E25B940006C5C3E /* Controller */,
 			);
+			name = "Grocery Shop Helper";
 			path = ShoppingHelper;
 			sourceTree = "<group>";
 		};
@@ -140,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E01DE72A1E24B4BB006C5C3E /* ShoppingHelper */ = {
+		E01DE72A1E24B4BB006C5C3E /* Grocery Shop Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E01DE73D1E24B4BB006C5C3E /* Build configuration list for PBXNativeTarget "ShoppingHelper" */;
+			buildConfigurationList = E01DE73D1E24B4BB006C5C3E /* Build configuration list for PBXNativeTarget "Grocery Shop Helper" */;
 			buildPhases = (
 				E01DE7271E24B4BB006C5C3E /* Sources */,
 				E01DE7281E24B4BB006C5C3E /* Frameworks */,
@@ -152,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = ShoppingHelper;
+			name = "Grocery Shop Helper";
 			productName = ShoppingHelper;
-			productReference = E01DE72B1E24B4BB006C5C3E /* ShoppingHelper.app */;
+			productReference = E01DE72B1E24B4BB006C5C3E /* Grocery Shop Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E01DE7261E24B4BB006C5C3E /* Build configuration list for PBXProject "ShoppingHelper" */;
+			buildConfigurationList = E01DE7261E24B4BB006C5C3E /* Build configuration list for PBXProject "Grocery Shop Helper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -187,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E01DE72A1E24B4BB006C5C3E /* ShoppingHelper */,
+				E01DE72A1E24B4BB006C5C3E /* Grocery Shop Helper */,
 			);
 		};
 /* End PBXProject section */
@@ -348,7 +349,7 @@
 				DEVELOPMENT_TEAM = LMMQL6UH2F;
 				INFOPLIST_FILE = ShoppingHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.ShoppingHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.GroceryShopHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -362,7 +363,7 @@
 				DEVELOPMENT_TEAM = LMMQL6UH2F;
 				INFOPLIST_FILE = ShoppingHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.ShoppingHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashleydonohoe.GroceryShopHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -372,7 +373,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E01DE7261E24B4BB006C5C3E /* Build configuration list for PBXProject "ShoppingHelper" */ = {
+		E01DE7261E24B4BB006C5C3E /* Build configuration list for PBXProject "Grocery Shop Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E01DE73B1E24B4BB006C5C3E /* Debug */,
@@ -381,7 +382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E01DE73D1E24B4BB006C5C3E /* Build configuration list for PBXNativeTarget "ShoppingHelper" */ = {
+		E01DE73D1E24B4BB006C5C3E /* Build configuration list for PBXNativeTarget "Grocery Shop Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E01DE73E1E24B4BB006C5C3E /* Debug */,

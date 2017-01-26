@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  ShoppingHelper
+//  GroceryShopHelper
 //
 //  Created by Gabriele on 1/19/17.
 //  Copyright © 2017 Ashley Donohoe. All rights reserved.

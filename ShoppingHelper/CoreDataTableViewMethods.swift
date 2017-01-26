@@ -1,6 +1,6 @@
 //
 //  CoreDataTableViewMethods.swift
-//  ShoppingHelper
+//  GroceryShopHelper
 //
 //  Created by Ashley Donohoe on 1/20/17.
 //  Copyright © 2017 Ashley Donohoe. All rights reserved.

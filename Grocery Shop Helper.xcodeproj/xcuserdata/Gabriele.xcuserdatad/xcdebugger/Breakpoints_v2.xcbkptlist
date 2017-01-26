@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/GooglePlacesAPIClient.swift"
+            timestampString = "506648535.786951"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "sharedInstance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/GCDBlackBox.swift"
+            timestampString = "506578365.002053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "performUIUpdatesOnMain(updates:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoppingHelper.performUIUpdatesOnMain (updates : () -&gt; ()) -&gt; ()"
+                  moduleName = "ShoppingHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gabriele/Dropbox/UdacityNanoDegree/iOS_Nanodegree/UIKit%20Take%202/ShoppingHelper/ShoppingHelper/GCDBlackBox.swift"
+                  timestampString = "506578388.265176"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoppingHelper.(performUIUpdatesOnMain (updates : () -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "ShoppingHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gabriele/Dropbox/UdacityNanoDegree/iOS_Nanodegree/UIKit%20Take%202/ShoppingHelper/ShoppingHelper/GCDBlackBox.swift"
+                  timestampString = "506578388.26673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/SettingsViewController.swift"
+            timestampString = "507015504.65614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/StoresListViewController.swift"
+            timestampString = "507007065.391864"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/GroceryListViewController.swift"
+            timestampString = "506921606.819371"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "GroceryListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoppingHelper.GroceryListViewController.sortControl.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UISegmentedControl&gt;"
+                  moduleName = "ShoppingHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gabriele/Dropbox/UdacityNanoDegree/iOS_Nanodegree/UIKit%20Take%202/ShoppingHelper/ShoppingHelper/GroceryListViewController.swift"
+                  timestampString = "506920887.787678"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoppingHelper.GroceryListViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ShoppingHelper.GroceryListViewController"
+                  moduleName = "ShoppingHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gabriele/Dropbox/UdacityNanoDegree/iOS_Nanodegree/UIKit%20Take%202/ShoppingHelper/ShoppingHelper/GroceryListViewController.swift"
+                  timestampString = "506920887.789655"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShoppingHelper.GroceryListViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ShoppingHelper.GroceryListViewController&gt;"
+                  moduleName = "ShoppingHelper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Gabriele/Dropbox/UdacityNanoDegree/iOS_Nanodegree/UIKit%20Take%202/ShoppingHelper/ShoppingHelper/GroceryListViewController.swift"
+                  timestampString = "506920887.791067"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShoppingHelper/CodeForLater.swift"
+            timestampString = "507005215.672085"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AddItemViewController"
+            landmarkType = "4">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
