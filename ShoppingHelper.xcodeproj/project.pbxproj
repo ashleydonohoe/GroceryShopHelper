@@ -76,14 +76,11 @@
 		E01DE72D1E24B4BB006C5C3E /* ShoppingHelper */ = {
 			isa = PBXGroup;
 			children = (
+				E071BB721E3ABB15002802B5 /* Other */,
 				E0B270A41E3470B30060B45B /* View */,
 				E0FDE84F1E30926C00A64562 /* API Client */,
 				E01DE7421E25B945006C5C3E /* Model */,
 				E01DE7411E25B940006C5C3E /* Controller */,
-				E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */,
-				E01DE7351E24B4BB006C5C3E /* Assets.xcassets */,
-				E01DE73A1E24B4BB006C5C3E /* Info.plist */,
-				E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */,
 			);
 			path = ShoppingHelper;
 			sourceTree = "<group>";
@@ -108,6 +105,17 @@
 				E01DE74D1E25B9BD006C5C3E /* Store.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E071BB721E3ABB15002802B5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E01DE72E1E24B4BB006C5C3E /* AppDelegate.swift */,
+				E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */,
+				E01DE7351E24B4BB006C5C3E /* Assets.xcassets */,
+				E01DE73A1E24B4BB006C5C3E /* Info.plist */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		E0B270A41E3470B30060B45B /* View */ = {
