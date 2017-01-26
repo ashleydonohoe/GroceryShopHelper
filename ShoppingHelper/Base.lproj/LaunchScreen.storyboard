@@ -26,10 +26,10 @@
                                 <rect key="frame" x="16" y="28" width="288" height="540"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pyO-ca-bMb">
-                                        <rect key="frame" x="56" y="0.0" width="176.5" height="220"/>
+                                        <rect key="frame" x="34.5" y="0.0" width="219.5" height="220"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Helper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yad-Ob-YN9">
-                                                <rect key="frame" x="0.0" y="0.0" width="176.5" height="220"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocery Shop Helper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yad-Ob-YN9">
+                                                <rect key="frame" x="0.0" y="0.0" width="219.5" height="220"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
