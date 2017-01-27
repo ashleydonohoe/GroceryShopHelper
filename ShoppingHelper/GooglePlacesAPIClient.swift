@@ -44,7 +44,7 @@ class GooglePlacesAPIClient: NSObject {
         // Data task to run
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            // if an error occurs, print it and show alert
+            // if an error occurs, print it. An error in completing this process will result in an alert on the Nearby Stores view 
             func displayError(_ error: String) {
                 print(error)
                 print("URL at time of error: \(url)")
