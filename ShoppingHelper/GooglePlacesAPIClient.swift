@@ -24,7 +24,7 @@ class GooglePlacesAPIClient: NSObject {
     }
     
     // Network call to get store data based on user preference and location
-    func getListOfStores(completionHandlerForStores: @escaping (_ success: Bool) -> Void) {
+    func getListOfStores(completionHandlerForStores: @escaping (_ success: Bool, _ error: String) -> Void) {
         // Method parameters
         let methodParameters:[String:Any] = [
             Constants.ParameterKeys.APIKey: Constants.ParameterValues.APIKey,
@@ -48,6 +48,7 @@ class GooglePlacesAPIClient: NSObject {
             func displayError(_ error: String) {
                 print(error)
                 print("URL at time of error: \(url)")
+                completionHandlerForStores(false, error)
             }
             
             guard (error == nil) else {
@@ -72,13 +73,13 @@ class GooglePlacesAPIClient: NSObject {
             do {
                 parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:AnyObject]
             } catch {
-                displayError("Could not parse the data as JSON: '\(data)'")
+                displayError("Could not parse the data as JSON")
                 return
             }            
             
             // Did Google return an error?
             guard let stat = parsedResult[Constants.ResponseKeys.Status] as? String, stat == Constants.ResponseValues.OKStatus else {
-                displayError("The Google Maps API returned an error. See error code and message in \(parsedResult)")
+                displayError("The Google Maps API returned an error.")
                 return
             }
             
@@ -93,7 +94,7 @@ class GooglePlacesAPIClient: NSObject {
             
             // Considered success if at least 1 store is returned; else, no stores could be returned
             if self.stores.count > 0 {
-                completionHandlerForStores(true)
+                completionHandlerForStores(true, "No stores returned")
             }
         }
         task.resume()

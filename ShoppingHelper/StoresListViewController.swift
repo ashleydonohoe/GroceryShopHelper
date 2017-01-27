@@ -68,7 +68,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         activity.isHidden = false
         activity.startAnimating()
         
-        googleMapsAPI.getListOfStores { (success) in
+        googleMapsAPI.getListOfStores { (success, error) in
             if success {
                 self.storesList = self.googleMapsAPI.stores
                 
@@ -80,7 +80,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             } else {
                 performUIUpdatesOnMain {
-                    let alertController = UIAlertController(title: "Error", message: "Could not download store locations. Please check your Internet connection.", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                     alertController.addAction(action)
                     self.present(alertController, animated: true, completion: nil)
