@@ -52,7 +52,7 @@ class GooglePlacesAPIClient: NSObject {
             }
             
             guard (error == nil) else {
-                displayError("There was an error: \(error)")
+                displayError("The Internet connection appears to be offline")
                 return
             }
             

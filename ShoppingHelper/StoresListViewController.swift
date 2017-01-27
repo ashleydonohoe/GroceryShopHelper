@@ -24,6 +24,20 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         activity.isHidden = true
         
+        
+//        // Setting up location manager to get permission
+//        locationManager = CLLocationManager()
+//        locationManager?.delegate = self
+//        locationManager?.requestWhenInUseAuthorization()
+//        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager?.startUpdatingLocation()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
         // Setting up location manager to get permission
         locationManager = CLLocationManager()
         locationManager?.delegate = self
@@ -31,16 +45,12 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.startUpdatingLocation()
 
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         if let location = locationManager?.location?.coordinate {
             googleMapsAPI.userLatitude = location.latitude
             googleMapsAPI.userLongitude = location.longitude
         }
-
+        
         checkForLocation()
     }
     
@@ -67,6 +77,8 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         self.refreshButton.isEnabled = false
         activity.isHidden = false
         activity.startAnimating()
+        
+        storesList = []
         
         googleMapsAPI.getListOfStores { (success, error) in
             if success {
@@ -95,8 +107,21 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Allows user to refresh stores
     @IBAction func refresh(_ sender: Any) {
+
+        
+        if googleMapsAPI.userLatitude == nil && googleMapsAPI.userLongitude == nil {
+            locationManager = CLLocationManager()
+            locationManager?.delegate = self
+            locationManager?.requestWhenInUseAuthorization()
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager?.startUpdatingLocation()
+        }
+
         checkForLocation()
+        
         storesTable.reloadData()
+        
+        print("Store list after refresh \(storesList)")
     }
     
     // Checks user location and then gets the store data
