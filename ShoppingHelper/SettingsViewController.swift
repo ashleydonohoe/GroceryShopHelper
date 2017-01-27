@@ -49,12 +49,4 @@ class SettingsViewController: UIViewController {
         
        showAlert(title: "Success", message: "Updated settings")
     }
-    
-    // Shows the alert for settings being saved
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
-    }
 }

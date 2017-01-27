@@ -92,11 +92,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             } else {
                 performUIUpdatesOnMain {
-                    let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alertController.addAction(action)
-                    self.present(alertController, animated: true, completion: nil)
-                    
+                    self.showAlert(title: "Error", message: error)
                     self.refreshButton.isEnabled = true
                     self.activity.isHidden = true
                     self.activity.stopAnimating()
@@ -129,10 +125,7 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
         if googleMapsAPI.userLatitude != nil && googleMapsAPI.userLongitude != nil {
             getStoreData()
         } else {
-            let alertController = UIAlertController(title: "Error", message: "Could not get user location: Please enable Location Services", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            showAlert(title: "Error", message: "Could not get user location: Please enable location services")
         }
     }
 }

@@ -20,6 +20,7 @@
 		E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E05232F31E32FFAB00744906 /* ShoppingHelper.xcdatamodeld */; };
 		E05232FF1E33106800744906 /* CoreDataTableViewMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */; };
 		E05CCE671E29EBE8007CC040 /* GroceryItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */; };
+		E085F48E1E3BE1F600E35596 /* HelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E085F48D1E3BE1F600E35596 /* HelperExtension.swift */; };
 		E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE84D1E308CD000A64562 /* Constants.swift */; };
 		E0FDE8511E30927D00A64562 /* GooglePlacesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */; };
 		E0FDE8531E31C59A00A64562 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */; };
@@ -41,6 +42,7 @@
 		E05232F41E32FFAB00744906 /* ShoppingHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingHelper.xcdatamodel; sourceTree = "<group>"; };
 		E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewMethods.swift; sourceTree = "<group>"; };
 		E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemDetailViewController.swift; sourceTree = "<group>"; };
+		E085F48D1E3BE1F600E35596 /* HelperExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperExtension.swift; sourceTree = "<group>"; };
 		E0FDE84D1E308CD000A64562 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E0FDE8501E30927D00A64562 /* GooglePlacesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIClient.swift; sourceTree = "<group>"; };
 		E0FDE8521E31C59A00A64562 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E01DE74B1E25B9A7006C5C3E /* StoreDetailsViewController.swift */,
 				E05CCE661E29EBE8007CC040 /* GroceryItemDetailViewController.swift */,
 				E05232FE1E33106800744906 /* CoreDataTableViewMethods.swift */,
+				E085F48D1E3BE1F600E35596 /* HelperExtension.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				E0FDE84E1E308CD000A64562 /* Constants.swift in Sources */,
 				E01DE7461E25B971006C5C3E /* StoresListViewController.swift in Sources */,
 				E05232FF1E33106800744906 /* CoreDataTableViewMethods.swift in Sources */,
+				E085F48E1E3BE1F600E35596 /* HelperExtension.swift in Sources */,
 				E01DE74C1E25B9A7006C5C3E /* StoreDetailsViewController.swift in Sources */,
 				E01DE74E1E25B9BD006C5C3E /* Store.swift in Sources */,
 				E05232F51E32FFAB00744906 /* ShoppingHelper.xcdatamodeld in Sources */,

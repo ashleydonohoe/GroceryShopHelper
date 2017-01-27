@@ -65,10 +65,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     func save() {
         // Checks if the required fields, itemName and itemQuantity, are filled
         if (itemName.text?.isEmpty)! || (itemQuantity.text?.isEmpty)! || (itemPrice.text?.isEmpty)! {
-            let alertController = UIAlertController(title: "Incomplete Data", message: "Item name, category, price and quantity are both required fields", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            showAlert(title: "Incomplete Data", message: "Item name, category, price and quantity are both required fields")
         }
         
         

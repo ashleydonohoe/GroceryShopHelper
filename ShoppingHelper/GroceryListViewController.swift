@@ -110,11 +110,7 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
             try self.fetchedResultsController.performFetch()
             groceryItemTable.reloadData()
         } catch {
-            print(error)
-            let alertController = UIAlertController(title: "Error", message: "Could not fetch data", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            showAlert(title: "Error", message: "Could not fetch data")
         }
     }
 }
