@@ -74,10 +74,13 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Obtains the store data from Google Maps API
     func getStoreData() {
-        self.refreshButton.isEnabled = false
-        activity.startAnimating()
         
         storesList = []
+        
+        performUIUpdatesOnMain {
+            self.refreshButton.isEnabled = false
+            self.activity.startAnimating()
+        }
         
         googleMapsAPI.getListOfStores { (success, error) in
             if success {
