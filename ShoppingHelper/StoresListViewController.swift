@@ -75,7 +75,6 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
     // Obtains the store data from Google Maps API
     func getStoreData() {
         self.refreshButton.isEnabled = false
-        activity.isHidden = false
         activity.startAnimating()
         
         storesList = []
@@ -86,7 +85,6 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 performUIUpdatesOnMain {
                     self.activity.stopAnimating()
-                    self.activity.isHidden = true
                     self.storesTable.reloadData()
                     self.refreshButton.isEnabled = true
                 }
@@ -94,7 +92,6 @@ class StoresListViewController: UIViewController, UITableViewDelegate, UITableVi
                 performUIUpdatesOnMain {
                     self.showAlert(title: "Error", message: error)
                     self.refreshButton.isEnabled = true
-                    self.activity.isHidden = true
                     self.activity.stopAnimating()
                 }
             }

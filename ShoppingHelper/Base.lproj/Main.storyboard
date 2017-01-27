@@ -31,7 +31,7 @@
         <!--Nearby Grocery Stores-->
         <scene sceneID="xAu-lc-bZ3">
             <objects>
-                <viewController id="dtT-rd-4Z1" customClass="StoresListViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dtT-rd-4Z1" customClass="StoresListViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aUx-Sz-5wh"/>
                         <viewControllerLayoutGuide type="bottom" id="Fsu-wt-243"/>
@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C2I-FN-0gX" id="yNq-GE-Kp9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -58,7 +58,7 @@
                                     <outlet property="delegate" destination="dtT-rd-4Z1" id="bZS-eJ-HAk"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-Kd-kG2">
                                 <rect key="frame" x="169" y="197" width="37" height="37"/>
                                 <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="color" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,7 +97,7 @@
         <!--Store Details-->
         <scene sceneID="b2j-vB-iZY">
             <objects>
-                <viewController storyboardIdentifier="StoreDetailsViewController" title="Store Details" id="7cs-Bk-gaX" customClass="StoreDetailsViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreDetailsViewController" title="Store Details" id="7cs-Bk-gaX" customClass="StoreDetailsViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Xg-kL-sTt"/>
                         <viewControllerLayoutGuide type="bottom" id="8Th-3G-FJe"/>
@@ -207,7 +207,7 @@
         <!--Settings-->
         <scene sceneID="ayj-6p-Nbf">
             <objects>
-                <viewController id="42H-0w-SCe" customClass="SettingsViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="42H-0w-SCe" customClass="SettingsViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G74-pT-aWK"/>
                         <viewControllerLayoutGuide type="bottom" id="TIa-bX-g71"/>
@@ -281,7 +281,7 @@
         <!--Grocery List-->
         <scene sceneID="47i-0q-1ol">
             <objects>
-                <viewController id="yxI-pl-pJp" customClass="GroceryListViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yxI-pl-pJp" customClass="GroceryListViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rn7-2G-kpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Vr0-n2-SQj"/>
@@ -309,11 +309,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PLZ-MH-cCs" id="KpN-4R-CQf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mhH-KX-MXk">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="45"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="45.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -360,7 +360,7 @@
         <!--Item Details-->
         <scene sceneID="d3w-AK-cxu">
             <objects>
-                <viewController storyboardIdentifier="GroceryItemDetailViewController" title="Item Details" id="5ob-Vo-mgn" customClass="GroceryItemDetailViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroceryItemDetailViewController" title="Item Details" id="5ob-Vo-mgn" customClass="GroceryItemDetailViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5F5-nB-sbh"/>
                         <viewControllerLayoutGuide type="bottom" id="2Vf-F7-ihS"/>
@@ -483,7 +483,7 @@
         <!--Add Item-->
         <scene sceneID="l5w-hR-T82">
             <objects>
-                <viewController storyboardIdentifier="AddItemViewController" title="Add Item" id="HES-VO-Bj4" customClass="AddItemViewController" customModule="ShoppingHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItemViewController" title="Add Item" id="HES-VO-Bj4" customClass="AddItemViewController" customModule="Grocery_Shop_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ha6-gw-Jwv"/>
                         <viewControllerLayoutGuide type="bottom" id="lhi-c6-EID"/>
