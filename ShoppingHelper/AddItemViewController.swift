@@ -36,7 +36,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func cancelItem(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addImage(_ sender: Any) {
@@ -107,7 +107,7 @@ extension AddItemViewController {
     func keyboardWillShow(_ notification:Notification) {
         if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
             if itemQuantity.isFirstResponder || itemPrice.isFirstResponder {
-                view.frame.origin.y -= getKeyboardHeight(notification)
+                view.frame.origin.y = -getKeyboardHeight(notification)
             }
         }
     }
