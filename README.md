@@ -20,3 +20,10 @@ The user has control over how far they want the store results to be on the third
 ## Screenshots
 
 <img src="http://i.imgur.com/mpKWcEw.png" alt="Grocery List View" height="300">
+<img src="http://i.imgur.com/rSKHriF.png" alt="Item Detail View" height="300">
+<img src="http://i.imgur.com/ed2vT6F.png" alt="Add Item View" height="300">
+
+<img src="http://i.imgur.com/ed2vT6F.png" alt="Store List View" height="300">
+<img src="http://i.imgur.com/6NSXMHK.jpg" alt="Store Detail View" height="300">
+<img src="http://i.imgur.com/psyam4d.pngg" alt="Settings" height="300">
+
