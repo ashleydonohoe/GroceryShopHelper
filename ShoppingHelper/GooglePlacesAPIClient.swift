@@ -37,7 +37,6 @@ class GooglePlacesAPIClient: NSObject {
     
         // Creating URL and request
         let urlString = Constants.GooglePlacesAPI.BaseListURL + escapedParameters(parameters: methodParameters as [String : AnyObject])
-        print(urlString)
         
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
@@ -49,7 +48,6 @@ class GooglePlacesAPIClient: NSObject {
             func displayError(_ error: String) {
                 print(error)
                 print("URL at time of error: \(url)")
-                //TODO: Show alert about issue
             }
             
             guard (error == nil) else {

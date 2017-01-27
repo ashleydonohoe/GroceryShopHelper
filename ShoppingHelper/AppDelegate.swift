@@ -47,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") {
             print("This is not the first launch!")
         } else {
-            print("This is the first launch!")
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
             UserDefaults.standard.set(5000, forKey: "maxStoreDistance") // Sets a default 5000m/3mi for store distance
             UserDefaults.standard.synchronize()
