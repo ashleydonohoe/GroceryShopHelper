@@ -19,4 +19,4 @@ The user has control over how far they want the store results to be on the third
 
 ## Screenshots
 
-
+![Grocery List View](http://i.imgur.com/mpKWcEw.png "Grocery List View")
