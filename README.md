@@ -29,6 +29,13 @@ The user has control over how far they want the store results to be on the third
 <img src="http://i.imgur.com/6NSXMHK.jpg" alt="Store Detail View" height="300">
 <img src="http://i.imgur.com/psyam4d.pngg" alt="Settings" height="300">
 
+## Future Features
+In the future, I would like to add more features to this app including:
+* Ability to mark items as complete with animation
+* More customization for finding nearby stores and sorting them
+* Ability to see items by category
+* More store details available, like reviews and phone number
+
 ## Running the App from Xcode
 To run this app from Xcode, unzip the zip file and then double-click Grocery Shop Helper.xcodeproj to open the project in Xcode. Click the Build and Run button on the Xcode toolbar to run the app in the simulator. To experience all the app's features, both a data connection and location services must be enabled on the simulator device. Otherwise, alert messages will show you the problems with the device's settings.
 
