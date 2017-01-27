@@ -31,6 +31,11 @@ The user has control over how far they want the store results to be on the third
 To run this app from Xcode, unzip the zip file and then double-click Grocery Shop Helper.xcodeproj to open the project in Xcode. Click the Build and Run button on the Xcode toolbar to run the app in the simulator. To experience all the app's features, both a data connection and location services must be enabled on the simulator device. Otherwise, alert messages will show you the problems with the device's settings.
 
 ## Resources Used
-During this project, I used several web resources in video and text format to create Grocery Shop Helper. Below is a list of them:
-- 
+During this project, I used several web resources in video and text format to create Grocery Shop Helper. In addition to the resources below, some code was adapted from previous iOS Nanodegree projects for such things as working with text fields and hiding/showing the keyboard. These are noted in code comments in the actual project.
+
+* [Apple API Reference](https://developer.apple.com/reference/)
+* [Ray Wenderlich iOS Tutorials](https://www.raywenderlich.com/)
+* [Mark Price's iOS 10 & Swift 3 Udemy course](https://www.udemy.com/devslopes-ios10/learn/v4/)
+* [StackOverflow](http://stackoverflow.com/)
+* [Udacity iOS Developer Nanodegree Courses](https://www.udacity.com/course/ios-developer-nanodegree--nd003)
 
