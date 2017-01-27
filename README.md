@@ -7,6 +7,8 @@ The first tab of the application is a grocery list presented as a table with two
 
 The user adds an item and its information by tapping a plus sign icon on the top right of the screen. The user is presented with fields to add an item name, category, quantity, price, and image. Adding an image is optional and not needed to save the item. Once the user selects to save the item, they're taken back to the grocery list table with the new item added.
 
+To delete an item, the user swiped on the item's row from the left to right to see a button to delete the item from the list view and permanent storage.
+
 ## Using the Nearby Store Search
 The second tab of Grocery Shop Helper allows users to download an up-to-date list of stores within a 3 to 10 mile radius of their current location. Using this feature requires the user to enable location services and agree to having Grocery Shop Helper have access to their current location. Once this is approved, the app will attempt to grab a list of 20 grocery stores using the Google Places API, and an activity indicator appears on the screen to show this in progress. 
 
@@ -14,4 +16,7 @@ The user is alerted if a network issue or permissions issue causes no stores to 
 
 ## Changing Settings
 The user has control over how far they want the store results to be on the third tab named Settings. The default setting is 3 miles, while the user has options to choose 5 or 10 miles. The user saves the setting, which immediately takes effect. This setting is stored using UserDefaults.
+
+## Screenshots
+
 
